@@ -44,7 +44,7 @@ export class ChatEngine {
     const catalog = manager.catalog;
 
     this._emitStatus("catalog", "Discovering available models...");
-    this.model = await catalog.getModel(config.model);
+    this.model = await catalog.getModelVariant(config.model);
     this.modelAlias = this.model.alias;
 
     // The SDK auto-selects the best variant for this hardware (GPU > NPU > CPU)

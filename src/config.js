@@ -7,7 +7,7 @@ const ROOT = path.resolve(__dirname, "..");
 
 export const config = {
   // Model
-  model: "phi-3.5-mini",
+  model: "Phi-3.5-mini-instruct-generic-cpu:2",
 
   // RAG
   docsDir: path.join(ROOT, "docs"),
