@@ -10,6 +10,14 @@ import { VectorStore } from "./vectorStore.js";
 import { config } from "./config.js";
 import { SYSTEM_PROMPT, SYSTEM_PROMPT_COMPACT } from "./prompts.js";
 
+// Returned directly, without ever calling the model, whenever retrieve()
+// finds no chunk above the relevance threshold. The model has repeatedly
+// shown it cannot reliably decide this on its own (see chatEngine.js's
+// retrieve() comment) – deciding it in code guarantees a correct, fast,
+// hallucination-free answer for out-of-scope questions.
+const NOT_AVAILABLE_MESSAGE =
+  "This information is not available in the local knowledge base. When unsure, choose the safest, most conservative option.";
+
 export class ChatEngine {
   constructor() {
     this.chatClient = null;
@@ -68,7 +76,9 @@ export class ChatEngine {
 
     // Create the native chat client with performance settings pre-configured
     this.chatClient = this.model.createChatClient();
-    this.chatClient.settings.temperature = 0.1; // Low for deterministic, safety-critical responses
+    this.chatClient.settings.temperature = 0.3; // Very low values push this small model into repetition loops; content accuracy is already enforced by RAG grounding, not temperature
+    this.chatClient.settings.frequencyPenalty = 1.0; // Discourage repeating the same phrases/sections in a loop
+    this.chatClient.settings.presencePenalty = 0.6; // Discourage re-introducing topics already covered in this response
     this._emitStatus("ready", `Model ready: ${this.modelAlias}`);
 
     // Open the local vector store
@@ -96,10 +106,14 @@ export class ChatEngine {
 
   /**
    * Retrieve relevant context from the local knowledge base.
+   * Chunks scoring below MIN_RELEVANCE_SCORE are dropped – with stopwords
+   * filtered out of the term vectors, a real topical match scores far
+   * higher (~0.2+) than an unrelated chunk that only shares noise (~0.03).
    */
   retrieve(query) {
     const topK = this.compactMode ? Math.min(config.topK, 3) : config.topK;
-    return this.store.search(query, topK);
+    const MIN_RELEVANCE_SCORE = 0.1;
+    return this.store.search(query, topK).filter((c) => c.score >= MIN_RELEVANCE_SCORE);
   }
 
   /**
@@ -124,6 +138,11 @@ export class ChatEngine {
   async query(userMessage, history = []) {
     // 1. Retrieve relevant chunks
     const chunks = this.retrieve(userMessage);
+
+    if (chunks.length === 0) {
+      return { text: NOT_AVAILABLE_MESSAGE, sources: [] };
+    }
+
     const context = this._buildContext(chunks);
 
     // 2. Build messages array
@@ -139,7 +158,7 @@ export class ChatEngine {
     ];
 
     // 3. Call the local model via the native chat client
-    this.chatClient.settings.maxTokens = this.compactMode ? 512 : 1024;
+    this.chatClient.settings.maxTokens = this.compactMode ? 400 : 700;
     const response = await this.chatClient.completeChat(messages);
 
     return {
@@ -160,6 +179,13 @@ export class ChatEngine {
   async *queryStream(userMessage, history = []) {
     // 1. Retrieve relevant chunks
     const chunks = this.retrieve(userMessage);
+
+    if (chunks.length === 0) {
+      yield { type: "sources", data: [] };
+      yield { type: "text", data: NOT_AVAILABLE_MESSAGE };
+      return;
+    }
+
     const context = this._buildContext(chunks);
 
     // 2. Build messages array
@@ -175,17 +201,20 @@ export class ChatEngine {
     ];
 
     // 3. Stream from the local model via the SDK's callback-based streaming
-    this.chatClient.settings.maxTokens = this.compactMode ? 512 : 1024;
+    this.chatClient.settings.maxTokens = this.compactMode ? 400 : 700;
 
     // Buffer chunks from the callback and yield them as an async iterable
     const textChunks = [];
     let resolve;
     let done = false;
+    let streamError = null;
 
     const streamPromise = this.chatClient.completeStreamingChat(messages, (chunk) => {
       textChunks.push(chunk);
       if (resolve) { resolve(); resolve = null; }
-    }).then(() => {
+    }).catch((err) => {
+      streamError = err;
+    }).finally(() => {
       done = true;
       if (resolve) { resolve(); resolve = null; }
     });
@@ -201,7 +230,19 @@ export class ChatEngine {
       })),
     };
 
-    // Yield text chunks from the SDK streaming callback buffer
+    // Yield text chunks from the SDK streaming callback buffer.
+    // This small CPU model sometimes gets stuck in a repetition loop with no
+    // native way to stop it (no cancellation API) and no decoding params
+    // (temperature/frequencyPenalty) that reliably prevent it. So we detect
+    // the loop ourselves: once the trailing ~50 characters of the generated
+    // text already appeared earlier in the same response, stop forwarding
+    // further output. The native call keeps running in the background but
+    // its result/error is discarded (already caught above).
+    let fullText = "";
+    const REPEAT_CHECK_LEN = 50;
+    const MIN_LEN_BEFORE_CHECK = 120;
+    let stoppedEarly = false;
+
     while (!done || textChunks.length > 0) {
       if (textChunks.length === 0 && !done) {
         await new Promise((r) => { resolve = r; });
@@ -210,13 +251,29 @@ export class ChatEngine {
         const chunk = textChunks.shift();
         const content = chunk.choices?.[0]?.delta?.content;
         if (content) {
+          fullText += content;
+          if (fullText.length > MIN_LEN_BEFORE_CHECK) {
+            const tail = fullText.slice(-REPEAT_CHECK_LEN);
+            const searchSpace = fullText.slice(0, fullText.length - REPEAT_CHECK_LEN);
+            if (searchSpace.includes(tail)) {
+              stoppedEarly = true;
+              break;
+            }
+          }
           yield { type: "text", data: content };
         }
       }
+      if (stoppedEarly) break;
     }
 
-    // Ensure the stream promise resolves cleanly
-    await streamPromise;
+    if (!stoppedEarly) {
+      // Ensure the stream promise resolves cleanly
+      await streamPromise;
+
+      if (streamError) {
+        yield { type: "error", data: `Model yanıt üretirken bir hata oluştu: ${streamError.message}` };
+      }
+    }
   }
 
   close() {

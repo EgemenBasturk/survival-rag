@@ -40,6 +40,20 @@ export function chunkText(text, maxTokens = 400, overlapTokens = 50) {
   return chunks;
 }
 
+// Common English function words – excluded so they don't dilute similarity
+// scores with noise shared by virtually every query and every document.
+const STOPWORDS = new Set([
+  "a", "an", "the", "is", "are", "was", "were", "be", "been", "being",
+  "to", "of", "on", "in", "at", "by", "for", "with", "without", "from",
+  "into", "over", "under", "about", "as", "so", "than", "then",
+  "this", "that", "these", "those", "it", "its", "i", "you", "he", "she",
+  "we", "they", "my", "your", "his", "her", "our", "their",
+  "and", "or", "but", "if", "not", "no", "nor",
+  "what", "which", "who", "whom", "how", "why", "when", "where",
+  "do", "does", "did", "doing", "can", "could", "will", "would",
+  "should", "may", "might", "must", "shall", "have", "has", "had",
+]);
+
 /**
  * Build simple term-frequency vector for a chunk of text.
  * Returns a Map<term, frequency>.
@@ -50,7 +64,7 @@ export function termFrequency(text) {
     .toLowerCase()
     .replace(/[^a-z0-9₂\-']/g, " ")
     .split(/\s+/)
-    .filter((t) => t.length > 1);
+    .filter((t) => t.length > 1 && !STOPWORDS.has(t));
   for (const t of tokens) {
     tf.set(t, (tf.get(t) || 0) + 1);
   }

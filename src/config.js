@@ -12,8 +12,8 @@ export const config = {
   // RAG
   docsDir: path.join(ROOT, "docs"),
   dbPath: path.join(ROOT, "data", "rag.db"),
-  chunkSize: 200,       // tokens (approx) – kept small for NPU compatibility
-  chunkOverlap: 25,     // tokens overlap between chunks
+  chunkSize: 350,       // ingilizceye çevirince bazı dosyalar sığmadı 
+  chunkOverlap: 40,      // tokens overlap between chunks – gelecekteki daha uzun dokümanlar için pay
   topK: 3,              // number of chunks to retrieve – limited for NPU context window
 
   // Server
