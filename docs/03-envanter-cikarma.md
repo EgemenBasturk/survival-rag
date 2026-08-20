@@ -1,32 +1,32 @@
 ---
-title: Envanter Çıkarma — Yanındaki Eşyaları Hayatta Kalma Aracına Çevirme
-category: İlk 24 Saat / Acil Öncelikler
+title: Taking Inventory — Turning What You Have Into Survival Tools
+category: First 24 Hours / Immediate Priorities
 id: DOC-ACL-03
 ---
 
-# Envanter Çıkarma — Yanındaki Eşyaları Hayatta Kalma Aracına Çevirme
+# Taking Inventory — Turning What You Have Into Survival Tools
 
-## Amaç
-Elindeki sınırlı eşyaları sistematik şekilde gözden geçirip, her birinin orijinal amacı dışında nasıl kullanılabileceğini belirlemek.
+## Purpose
+Systematically reviewing the limited items you have on hand and figuring out how each can be used beyond its original purpose.
 
-## Güvenlik Uyarısı
-Eşyaları orijinal amacı dışında kullanırken (bir şişeyi kesip keskin kenar oluşturmak gibi) dikkatli ol — doğaçlama alet yapımı yaralanma riski taşır. Elin/gözün için tehlike oluşturacak işlemleri (kırma, keskinleştirme) yavaş ve kontrollü yap.
+## Safety Warning
+Be careful when using items outside their original purpose (like cutting a bottle to make a sharp edge) — improvised tool-making carries injury risk. Do anything that could hurt your hand or eyes (breaking, sharpening) slowly and under control.
 
-## Adımlar
-1. **Tüm eşyaları çıkar ve grupla:** Cepler, çanta, üzerindeki her şeyi tek bir yere topla — gözden kaçan bir şey olabilir.
-2. **Her eşyanın alternatif kullanımını düşün:**
-   - Telefon → fener, ayna (parlak ekran ile sinyal), GPS koordinatı (internet olmasa bile GPS çipi çoğu telefonda çalışabilir), saat.
-   - Plastik şişe → su taşıma, güneş enerjili damıtma düzeneğinin parçası (bkz. doküman 13).
-   - Çakmak → ateş yakma, parlak yüzeyiyle kısa mesafe sinyal.
-   - Kemer, ayakkabı bağı → bağlama malzemesi, tuzak/olta ipi.
-   - Gözlük camı (varsa) → güneş ışığıyla ateş yakma merceği.
-   - Giysi katmanları → izolasyon, bandaj, işaret bayrağı.
-3. **Önceliğe göre grupla:** Eşyaları doküman 01'deki öncelik sırasına göre eşleştir (hangi eşya barınak/su/ateş/sinyal ihtiyacına hizmet ediyor).
-4. **Erişilebilir tut:** Kritik eşyaları (çakmak, telefon) rastgele dağıtmak yerine tek, bildiğin bir yerde topla — karanlıkta veya panik anında arama kaybettirmesin.
+## Steps
+1. **Take everything out and group it:** Pockets, bag, everything on you — gather it all in one place, you might be overlooking something.
+2. **Think about each item's alternative use:**
+   - Phone → flashlight, mirror (signal with the bright screen), GPS coordinates (the GPS chip can work on many phones even without a signal), clock.
+   - Plastic bottle → carrying water, part of a solar still setup (see document 13).
+   - Lighter → starting fire, short-range signaling with its shiny surface.
+   - Belt, shoelaces → binding material, trap/fishing line.
+   - Eyeglass lens (if you have one) → a lens for starting a fire with sunlight.
+   - Layers of clothing → insulation, bandage, signal flag.
+3. **Group by priority:** Match items to the priority order in document 01 (which item serves shelter/water/fire/signaling).
+4. **Keep it accessible:** Instead of scattering critical items (lighter, phone) randomly, keep them in one place you know — don't lose time searching in the dark or in a panic.
 
-## Ne Zaman Dikkatli Olmalısın
-- Tek kullanımlık kaynakları (pil, gaz, tükenen malzeme) erken ve gereksiz yere tüketme.
-- Bir eşyayı parçalara ayırmadan önce (örn. şişeyi kesmeden önce) bütün haliyle daha faydalı olup olmayacağını düşün — geri dönüşü olmayan bir işlem.
+## When to Be Careful
+- Don't waste single-use resources (batteries, fuel, consumable material) early or unnecessarily.
+- Before breaking an item into pieces (e.g., cutting a bottle), think about whether it would be more useful whole — this is irreversible.
 
-## Kaynak
-Genel hayatta kalma pratiği — doğaçlama ekipman kullanımı (improvisation) prensipleri. Tek bir resmi kaynağa özgü değildir.
+## Reference
+General survival practice — principles of improvised equipment use. Not specific to a single official source.

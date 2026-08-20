@@ -1,28 +1,28 @@
 ---
-title: Yer İşaretleri — SOS, V, X — Uluslararası Yer-Hava Sinyal Kodu
-category: Sinyal ve Kurtarma
+title: Ground Signals — SOS, V, X — the International Ground-to-Air Code
+category: Signaling & Rescue
 id: DOC-SIN-03
 ---
 
-# Yer İşaretleri — SOS, V, X — Uluslararası Yer-Hava Sinyal Kodu
+# Ground Signals — SOS, V, X — the International Ground-to-Air Code
 
-## Amaç
-Havadan (uçak, drone, helikopter) görülebilecek büyüklükte, standart anlamı olan yer işaretleri oluşturmak.
+## Purpose
+Creating ground signals, large enough to be seen from the air (plane, drone, helicopter), with a standard, recognised meaning.
 
-## Güvenlik Uyarısı
-İşaretleri gerçekten yardım gerektiğinde kullan — yanlış/gereksiz sinyal, kurtarma kaynaklarının başka bir acil duruma gitmesini geciktirebilir.
+## Safety Warning
+Only use these signals when you genuinely need help — a false or unnecessary signal can delay rescue resources from reaching another real emergency.
 
-## Adımlar
-1. Açık, havadan net görülebilecek bir alan seç (kumsal, açık çayır) — ağaç örtüsü altı işe yaramaz.
-2. İşaret elemanlarını mümkün olduğunca büyük yap: her çizgi/harf en az 3 metre uzunluğunda, aralarında en az 1 metre boşluk bırak — küçük işaretler havadan fark edilmez.
-3. **V** işareti: "Yardıma ihtiyacım var" anlamına gelir.
-4. **X** işareti: "Tıbbi yardıma ihtiyacım var" anlamına gelir.
-5. **SOS:** Genel, evrensel tehlike/yardım çağrısıdır.
-6. İşaretleri arka planla kontrast oluşturacak malzemeyle yap: kumda koyu renkli taş/dal, yeşil alanda açık renkli kumaş/taş.
-7. İşareti yaptıktan sonra periyodik olarak kontrol et, rüzgar/gelgit bozmuş olabilir.
+## Steps
+1. Choose an open area clearly visible from the air (beach, open field) — under tree cover is useless.
+2. Make the signal elements as large as possible: each line/letter at least 3 metres long, with at least 1 metre of space between elements — small signals aren't noticeable from the air.
+3. **V** symbol: means "I require assistance."
+4. **X** symbol: means "I require medical assistance."
+5. **SOS:** the general, universal distress/help call.
+6. Build the signals with material that contrasts against the background: dark stones/branches on sand, light-coloured cloth/stones on green ground.
+7. Check the signal periodically after building it — wind/tide may have disturbed it.
 
-## Ne Zaman Dikkatli Olmalısın
-İşaretin boyutu küçükse yüksekten (uçaktan) hiç görünmeyebilir — "büyük ve kontrastlı" öncelik olmalı, şekil detayından daha önemlidir.
+## When to Be Careful
+If a signal is too small it may not be visible at all from altitude (from a plane) — "large and high-contrast" should be the priority, more important than shape detail.
 
-## Kaynak
-ICAO / uluslararası yer-hava acil durum sinyal kodu — havacılık ve kurtarma kuruluşlarınca standartlaştırılmış, dünya genelinde aynı şekilde tanınan bir sinyal sistemidir. Kaynak: offgridweb.com/survival/international-ground-to-air-signaling-code
+## Reference
+The ICAO / international ground-to-air emergency signal code — standardised by aviation and rescue organisations, recognised identically worldwide. Source: offgridweb.com/survival/international-ground-to-air-signaling-code

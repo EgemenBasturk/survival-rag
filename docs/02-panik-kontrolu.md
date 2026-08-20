@@ -1,26 +1,26 @@
 ---
-title: STOP Metodu — Panik Kontrolü ve Karar Verme
-category: İlk 24 Saat / Acil Öncelikler
+title: The STOP Method — Panic Control and Decision-Making
+category: First 24 Hours / Immediate Priorities
 id: DOC-ACL-02
 ---
 
-# STOP Metodu — Panik Kontrolü ve Karar Verme
+# The STOP Method — Panic Control and Decision-Making
 
-## Amaç
-Beklenmedik ve tehlikeli bir durumda panik yapmadan, net düşünerek karar verebilmek. STOP (Stop-Think-Observe-Plan) tekniği, kurtarma ve hayatta kalma eğitiminde yaygın kullanılan bir zihinsel çerçevedir.
+## Purpose
+Being able to think clearly and make decisions without panicking in an unexpected, dangerous situation. STOP (Stop-Think-Observe-Plan) is a mental framework widely used in rescue and survival training.
 
-## Güvenlik Uyarısı
-Bu bir psikolojik ilk yardım tekniğidir, tıbbi bir müdahale değildir. Panik atak, göğüs ağrısı gibi ciddi belirtiler varsa bu teknik yeterli olmayabilir — mümkünse tıbbi yardım aramaya öncelik ver.
+## Safety Warning
+This is a psychological first-aid technique, not a medical intervention. If you have serious symptoms like a panic attack or chest pain, this technique may not be enough — seek medical help if possible.
 
-## Adımlar
-1. **S — Stop (Dur):** Olduğun yerde dur, mümkünse otur. Derin nefes al. Olan biteni değiştiremeyeceğini kabul et — şu an önemli olan bir sonraki hareketin.
-2. **T — Think (Düşün):** Panik yapma. En değerli aracın beynin. Aceleyle hareket etmeden önce durumu zihninde tekrar gözden geçir.
-3. **O — Observe (Gözlemle):** Çevreni değerlendir — arazi, hava durumu, mevcut kaynaklar. Yanındaki malzemeleri, ekipmanı ve varsa yanındakilerin durumunu/yeteneklerini gözden geçir.
-4. **P — Plan (Planla):** İhtiyaçlarını önceliklendir (bkz. doküman 01) ve enerjini koruyarak adım adım bir plan yap. Aynı anda her şeyi çözmeye çalışma.
+## Steps
+1. **S — Stop:** Stop where you are, sit down if you can. Take a deep breath. Accept that you can't undo what has happened — what matters now is your next move.
+2. **T — Think:** Don't panic. Your brain is your most valuable tool. Go over the situation in your mind before acting hastily.
+3. **O — Observe:** Assess your surroundings — terrain, weather, available resources. Review the supplies and equipment you have, and the condition/abilities of anyone with you.
+4. **P — Plan:** Prioritise your needs (see document 01) and make a step-by-step plan while conserving your energy. Don't try to solve everything at once.
 
-## Ne Zaman Dikkatli Olmalısın
-- Panik anında en sık yapılan hata: hemen hareket etmek, plansız yürümeye başlamak. Bu enerji ve sıvı kaybettirir, kurtarma ekiplerinin seni bulmasını da zorlaştırabilir (bkz. doküman 24 — kalmalı mı hareket mi).
-- STOP tekniği bir kere uygulanıp bitmez — yeni bir sorunla karşılaştıkça tekrar uygulanmalı.
+## When to Be Careful
+- The most common mistake during panic: moving immediately, walking off without a plan. This wastes energy and fluids, and can also make it harder for rescuers to find you (see document 24 — stay or move).
+- STOP isn't a one-time technique — apply it again each time a new problem arises.
 
-## Kaynak
-Genel kurtarma ve hayatta kalma eğitiminde (izcilik, hunter education kuruluşları, dağcılık/bushcraft eğitmenleri) yaygın kullanılan bir teknik. Tek bir resmi kaynağa (ör. FM 21-76) özgü değildir.
+## Reference
+A technique widely used in general rescue and survival training (scouting, hunter education organisations, mountaineering/bushcraft instructors). Not specific to a single official source (e.g., FM 21-76).

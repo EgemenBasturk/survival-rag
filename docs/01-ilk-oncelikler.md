@@ -1,29 +1,28 @@
 ---
-title: Adaya Düşünce İlk Ne Yapmalı — Öncelik Sıralaması
-category: İlk 24 Saat / Acil Öncelikler
+title: What To Do First After Washing Up on the Island — Priority Order
+category: First 24 Hours / Immediate Priorities
 id: DOC-ACL-01
 ---
 
-# Adaya Düşünce İlk Ne Yapmalı — Öncelik Sıralaması
+# What To Do First After Washing Up on the Island — Priority Order
 
-## Amaç
-Issız bir alanda mahsur kaldığında hangi ihtiyacın önce karşılanması gerektiğini belirlemek. Yanlış öncelik sırası (örneğin hemen yiyecek aramaya başlamak) hayati risk oluşturabilir.
+## Purpose
+Figuring out which need to be met first when stranded in a remote area. Getting the priority order wrong (e.g., searching for food right away) can create life-threatening risk.
 
-## Güvenlik Uyarısı
-Bu genel bir öncelik rehberidir, senin durumuna özel değildir. Yaralıysan veya yakında ciddi bir tehlike varsa (yükselen su, düşme riski taşıyan alan vb.) önce oradan uzaklaş, öncelik sıralamasını ondan sonra uygula.
+## Safety Warning
+This is a general priority guide, not specific to your situation. If you are injured or a serious hazard is nearby (rising water, an area at risk of collapse), move away from it first — apply the priority order afterward.
 
-## Adımlar
-1. **Havayı kontrol et (3 dakika kuralı):** Boğulma, duman, gaz gibi bir tehlike var mı? Varsa önce oradan uzaklaş.
-2. **Yaralanma kontrolü yap:** Kendini ve varsa yanındakileri kontrol et. Ciddi kanama veya kırık varsa ilk yardım önceliklidir.
-3. **Barınak ihtiyacını değerlendir (3 saat kuralı):** Hava soğuk, rüzgarlı veya çok sıcaksa barınak yiyecekten önce gelir. Aşırı sıcak veya soğuk birkaç saat içinde öldürebilir.
-4. **Su kaynağı ara (3 gün kuralı):** Barınak sağlandıktan sonra su önceliklidir. Susuz birkaç gün dayanılabilir ama performans hızla düşer.
-5. **Sinyal verme hazırlığı yap:** Ateş yakma ve sinyal malzemelerini erken hazırla — kurtarma fırsatı ne zaman çıkacağı belli olmaz.
-6. **Yiyecek en son gelir (3 hafta kuralı):** Vücut yiyeceksiz haftalarca dayanabilir. Bilmediğin bitki veya mantar aramak için acele etme.
+## Steps
+1. **Check the air (the 3-minute rule):** Is there a hazard like drowning, smoke, or gas? If so, move away immediately.
+2. **Check for injuries:** Check yourself and anyone with you. Serious bleeding or a fracture takes priority for first aid.
+3. **Assess your shelter needs (the 3-hour rule):** If it's cold, windy, or very hot, shelter comes before food. Extreme heat or cold can kill within a few hours.
+4. **Look for a water source (the 3-day rule):** Once shelter is secured, water is the priority. You can go a few days without water, but performance drops fast.
+5. **Prepare to signal for rescue:** Get fire-starting and signaling materials ready early — you never know when a rescue opportunity will appear.
+6. **Food comes last (the 3-week rule):** The body can go weeks without food. Don't rush to search for an unfamiliar plant or mushroom.
 
-## Ne Zaman Dikkatli Olmalısın
-- Panik halinde rastgele hareket etmek enerji ve sıvı kaybettirir — önce sakinleş.
-- "Yiyecek bulmalıyım" dürtüsü ilk saatlerde çok güçlü olabilir ama gerçek öncelik değildir.
+## When to Be Careful
+- Moving around randomly out of panic wastes energy and fluids — calm down first.
+- The urge to "find food" can feel very strong in the first hours, but it isn't the real priority.
 
-## Kaynak
-"Rule of Three(s)" (3'ler Kuralı) — askeri ve sivil hayatta kalma eğitiminde yaygın kullanılan, tek bir resmi kaynağa değil genel hayatta kalma doktrinine dayanan bir önceliklendirme ilkesidir. Belirli bir el kitabına (örn. FM 21-76) birebir atıf doğrulanamamıştır.
-
+## Reference
+The "Rule of Three(s)" — a prioritisation principle widely used across military and civilian survival training, based on general survival doctrine rather than a single official source. A verbatim attribution to a specific manual (e.g., FM 21-76) could not be verified.

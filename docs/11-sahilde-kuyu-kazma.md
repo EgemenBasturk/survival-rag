@@ -1,26 +1,26 @@
 ---
-title: Sahilde Kuyu Kazma (Beach Well) Tekniği
-category: Su
+title: Digging a Beach Well
+category: Water
 id: DOC-SU-02
 ---
 
-# Sahilde Kuyu Kazma (Beach Well) Tekniği
+# Digging a Beach Well
 
-## Amaç
-Doğrudan tatlı su kaynağı olmayan bir kıyıda, kumun doğal filtreleme özelliğinden yararlanarak su elde etmek.
+## Purpose
+Getting water on a coastline with no direct source of fresh water, by taking advantage of sand's natural filtering.
 
-## Güvenlik Uyarısı
-Bu yöntemle elde edilen su genelde hâlâ bir miktar tuz ve mikroorganizma içerir — asla doğrudan içme, mutlaka kaynat veya damıt.
+## Safety Warning
+Water obtained this way usually still contains some salt and microorganisms — never drink it directly, always boil or distill it.
 
-## Adımlar
-1. Gelgit hattının üzerinde (deniz suyunun ulaşmadığı ama kuma yakın) bir nokta seç.
-2. Kumda yaklaşık 30-60 cm derinliğinde bir çukur kaz.
-3. Çukurun tabanında su birikmeye başlamasını bekle — bu su kum tabakasından süzülerek gelir ve genelde deniz suyundan daha az tuzludur.
-4. Üstte biriken ilk suyu (en tuzlu/bulanık kısmı) alma, biraz bekleyip daha berrak katmanı topla.
-5. Topladığın suyu mutlaka kaynatarak veya damıtarak arıt (doküman 12 veya 13) — kum filtrelemesi tuzun ve mikropların tamamını gidermez.
+## Steps
+1. Choose a spot above the tide line (out of reach of seawater but close to the sand).
+2. Dig a pit about 30-60 cm deep in the sand.
+3. Wait for water to start collecting at the bottom of the pit — this water seeps through the sand layer and is usually less salty than seawater.
+4. Don't take the first water that collects on top (the saltiest/cloudiest part) — wait and collect the clearer layer below.
+5. Always purify the water you collect by boiling or distilling (document 12 or 13) — sand filtering doesn't remove all the salt and microbes.
 
-## Ne Zaman Dikkatli Olmalısın
-Bu su tuzlu tada sahip olmasa bile "az tuzlu, o zaman içilir" diye düşünme — arıtma adımını asla atlama.
+## When to Be Careful
+Even if this water doesn't taste salty, don't assume "a little salt means it's fine to drink" — never skip the purification step.
 
-## Kaynak
-Genel kıyı/ada hayatta kalma tekniği — bushcraft ve deniz hayatta kalma eğitiminde yaygın olarak öğretilen bir yöntem.
+## Reference
+General coastal/island survival technique — a method widely taught in bushcraft and maritime survival training.

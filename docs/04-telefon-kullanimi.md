@@ -1,28 +1,28 @@
 ---
-title: Telefonu Akıllı Kullanma — Pil Tasarrufu, GPS ve Acil Sinyal
-category: İlk 24 Saat / Acil Öncelikler
+title: Using Your Phone Wisely — Battery Saving, GPS, and Emergency Signaling
+category: First 24 Hours / Immediate Priorities
 id: DOC-ACL-04
 ---
 
-# Telefonu Akıllı Kullanma — Pil Tasarrufu, GPS ve Acil Sinyal
+# Using Your Phone Wisely — Battery Saving, GPS, and Emergency Signaling
 
-## Amaç
-İnternet olmasa bile telefonun hayatta kalma aracı olarak kullanım süresini uzatmak.
+## Purpose
+Extending how long your phone remains useful as a survival tool, even without internet.
 
-## Güvenlik Uyarısı
-Yanlış kullanım (ekranı sürekli açık tutmak, sürekli sinyal aratmak) pili hızla tüketir — acil bir sinyal fırsatında pilin bitmiş olabilir.
+## Safety Warning
+Misuse (keeping the screen on constantly, letting it search for signal nonstop) drains the battery fast — you could be out of battery exactly when a real signaling opportunity appears.
 
-## Adımlar
-1. Uçak moduna al — sinyal olmayan bir yerde telefon sürekli baz istasyonu aramaya çalışır, bu pili hızla tüketir.
-2. Ekran parlaklığını en düşük seviyeye çek, ekran kapanma süresini kısalt.
-3. Kullanmadığın uygulamaları tamamen kapat, arka plan yenilemeyi kapat.
-4. GPS'i sadece konum kaydetmek istediğinde aç. Not: bazı telefonlarda uçak modu GPS çipini de kapatır, bazılarında kapatmaz — kendi cihazında önceden test et.
-5. Telefonu doğrudan güneşte veya soğukta bırakma, aşırı sıcaklık pil performansını düşürür.
-6. Fenerini kısa aralıklarla, sadece gerektiğinde (sinyal verme, malzeme arama) kullan.
-7. Şarjın bir kısmını, hayati bir sinyal fırsatı (uçak/gemi görünce) için ayır, %100 tüketme.
+## Steps
+1. Switch to airplane mode — in an area with no signal, the phone constantly tries to search for a cell tower, which drains the battery quickly.
+2. Turn screen brightness down to the lowest level, shorten the screen timeout.
+3. Fully close apps you're not using, turn off background refresh.
+4. Only turn on GPS when you want to record a location. Note: on some phones airplane mode also disables the GPS chip, on others it doesn't — test this on your own device beforehand.
+5. Don't leave your phone in direct sun or cold — extreme temperatures reduce battery performance.
+6. Use the flashlight in short bursts, only when needed (signaling, searching for materials).
+7. Reserve part of your charge for a critical signaling opportunity (spotting a plane/ship) — don't drain it to 0%.
 
-## Ne Zaman Dikkatli Olmalısın
-Telefonu sürekli "bilgi kaynağı" olarak kullanmak cazip gelir ama her ekran açılışı pil tüketir. İhtiyacın olan bilgiye ilk saatlerde toplu halde bakıp planını yap, sonra telefonu kapat.
+## When to Be Careful
+It's tempting to keep using your phone as a constant "information source," but every screen-on drains the battery. Look up what you need in bulk during the first hours, make your plan, then turn the phone off.
 
-## Kaynak
-Genel akıllı telefon pil yönetimi bilgisi — üreticilerin pil optimizasyon tavsiyeleriyle tutarlıdır. Uçak modunun GPS'e etkisi cihaz modeline göre değişebilir, bu yüzden kendi telefonunda test etmen önerilir.
+## Reference
+General smartphone battery management knowledge — consistent with manufacturers' battery optimisation guidance. Airplane mode's effect on GPS varies by device model, so testing on your own phone is recommended.

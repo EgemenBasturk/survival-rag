@@ -1,26 +1,26 @@
 ---
-title: Islak Koşullarda Ateş Yakma ve Ateşi Yağmurdan Koruma
-category: Ateş
+title: Starting a Fire in Wet Conditions and Protecting It from Rain
+category: Fire
 id: DOC-ATS-04
 ---
 
-# Islak Koşullarda Ateş Yakma ve Ateşi Yağmurdan Koruma
+# Starting a Fire in Wet Conditions and Protecting It from Rain
 
-## Amaç
-Her şeyin ıslak olduğu durumda ateş yakmanın ve sürdürmenin özel tekniklerini öğrenmek.
+## Purpose
+Learning the specific techniques for starting and sustaining a fire when everything is wet.
 
-## Güvenlik Uyarısı
-Islak odun/yeşil dal aşırı duman üretir — kapalı bir barınak içinde bu tür ateş yakma duman zehirlenmesi riski taşır, her zaman havalandırma olsun.
+## Safety Warning
+Wet wood/green branches produce excessive smoke — building this kind of fire inside an enclosed shelter carries smoke-inhalation risk, always keep it ventilated.
 
-## Adımlar
-1. **Kuru kav bul:** Ölü ağaçların dip kısmındaki iç kabuk, düşmüş dalların gövde içi (dış yüzey ıslak olsa bile içi kuru olabilir) iyi seçeneklerdir.
-2. **Batonlama tekniği:** Islak bir dalın dış yüzeyini bıçak/keskin taşla soyarak kuru iç kısmına ulaş, ince talaşlar çıkar.
-3. **Yükseltilmiş platform:** Ateşi doğrudan ıslak zemine değil, kalın dallardan yapılmış küçük bir platform üzerine kur.
-4. **Üstünü koru:** Ateşi yakmadan önce, üzerine basit bir çatı kurarak devam eden yağmurdan koru — ama alevle temas etmeyecek yükseklikte.
-5. Normalden daha fazla ve daha ince kav/çıra hazırla — ıslak koşulda ilk denemeler başarısız olabilir.
+## Steps
+1. **Find dry tinder:** The inner bark at the base of dead trees, or the inside of fallen branches (even if the outside is wet, the inside can be dry), are good options.
+2. **Batoning technique:** Peel the wet outer surface off a branch with a knife/sharp rock to reach the dry interior, producing fine shavings.
+3. **Raised platform:** Build the fire not directly on wet ground, but on a small platform made of thick branches.
+4. **Cover it:** Before lighting, build a simple roof over it to protect from ongoing rain — but keep it high enough to not touch the flame.
+5. Prepare more, and finer, tinder/kindling than usual — first attempts in wet conditions may fail.
 
-## Ne Zaman Dikkatli Olmalısın
-Yeşil (canlı, taze kesilmiş) dallar neredeyse hiç yanmaz, sadece tüter — bunları ana yakıt olarak değil, sinyal dumanı için (doküman 21) kullan.
+## When to Be Careful
+Green (live, freshly cut) branches barely burn at all, they just smoulder — use these not as main fuel, but for signal smoke (document 21).
 
-## Kaynak
-Genel bushcraft "kötü hava koşullarında ateş" tekniği — wilderness survival eğitiminde yaygın olarak öğretilen bir konu.
+## Reference
+A general bushcraft "fire in bad weather" technique — a topic widely taught in wilderness survival training.

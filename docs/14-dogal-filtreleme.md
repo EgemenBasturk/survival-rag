@@ -1,27 +1,27 @@
 ---
-title: Doğal Filtreleme — Kum, Çakıl, Kömür Katmanlı Filtre
-category: Su
+title: Natural Filtering — Sand, Gravel, Charcoal Layers
+category: Water
 id: DOC-SU-05
 ---
 
-# Doğal Filtreleme — Kum, Çakıl, Kömür Katmanlı Filtre
+# Natural Filtering — Sand, Gravel, Charcoal Layers
 
-## Amaç
-Bulanık, parçacıklı suyu kaynatmadan/damıtmadan önce ön temizlemeden geçirmek. Filtreleme tek başına suyu içilebilir yapmaz, sadece kaynatma/damıtmaya hazırlar.
+## Purpose
+Pre-cleaning cloudy, particle-laden water before boiling/distilling. Filtering alone does not make water drinkable, it only prepares it for boiling/distilling.
 
-## Güvenlik Uyarısı
-Bu filtre mikropları/bakterileri gidermez, sadece görünür kirliliği azaltır. Filtrelenmiş suyu mutlaka kaynat (doküman 12) veya damıt (doküman 13).
+## Safety Warning
+This filter does not remove microbes/bacteria, it only reduces visible contamination. Always boil (document 12) or distill (document 13) filtered water.
 
-## Adımlar
-1. Alttan üste delikli bir kap (kesilmiş şişe, ters çevrilmiş) hazırla.
-2. En alta ince bir bez/kumaş parçası koy — parçacıkların akmasını önlemek için.
-3. Üzerine sırasıyla: ince kum, kaba kum, küçük çakıl, varsa odun kömürü parçaları (yanmış, soğumuş ateş kömürü) katmanla.
-4. En üste tekrar ince bir bez/çim tabakası koy.
-5. Bulanık suyu üstten yavaşça dök, alttan damlayan/akan suyu temiz bir kapta topla.
-6. Su hâlâ bulanıksa aynı filtreden 2-3 kez geçir.
+## Steps
+1. Prepare a container with holes at the bottom (a cut bottle, turned upside down).
+2. Put a thin cloth at the very bottom (to stop particles from washing through).
+3. Layer on top of that, in order: fine sand, coarse sand, small gravel, and charcoal pieces if available (cooled charcoal from a fire).
+4. Put another thin layer of cloth/grass on top.
+5. Slowly pour the cloudy water in from the top, and collect what drips/flows out the bottom in a clean container.
+6. If the water is still cloudy, pass it through the same filter 2-3 more times.
 
-## Ne Zaman Dikkatli Olmalısın
-Filtrelenmiş su berrak görünse bile "temiz" değildir — görünür kirlilik ile mikrobiyolojik güvenlik farklı şeylerdir, kaynatma adımını asla atlama.
+## When to Be Careful
+Filtered water may look clear but is not "clean" — visible clarity and microbiological safety are different things, never skip the boiling step.
 
-## Kaynak
-Genel doğal su filtreleme tekniği — bushcraft ve afet hazırlık eğitiminde yaygın olarak öğretilen bir ön arıtma yöntemi.
+## Reference
+A general natural water filtering technique — widely taught in bushcraft and disaster-preparedness training as a pre-treatment method.

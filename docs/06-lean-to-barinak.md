@@ -1,26 +1,26 @@
 ---
-title: Lean-to (Tek Eğimli) Barınak Yapımı
-category: Barınak
+title: Building a Lean-To Shelter
+category: Shelter
 id: DOC-BRN-02
 ---
 
-# Lean-to (Tek Eğimli) Barınak Yapımı
+# Building a Lean-To Shelter
 
-## Amaç
-Az malzeme ve kısa sürede kurulabilen, rüzgar ve yağmurdan temel koruma sağlayan bir barınak tipi.
+## Purpose
+A shelter type that can be built quickly with little material, providing basic protection from wind and rain.
 
-## Güvenlik Uyarısı
-Desteksiz veya gevşek dallarla kurulan barınak üzerine devrilebilir. Kullanmadan önce kalın destek dallarını sağlamlık açısından test et.
+## Safety Warning
+A shelter built with unsupported or loose branches can collapse on you. Test the thick support branches for sturdiness before using them.
 
-## Adımlar
-1. İki ağaç arasına (veya bir ağaç ile yere çakılan bir kazığa) yere paralel bir ana destek dalı (kiriş) bağla, yerden yaklaşık bel yüksekliğinde.
-2. Rüzgara arkası dönük olacak şekilde, kirişe dayalı çapraz dallar diz (yaklaşık 45 derece açıyla).
-3. Çapraz dalların üzerini, en kalından en inceye doğru, dal/yaprak/otla kapla — su akışını dışarı yönlendirecek şekilde alttan üste doğru katmanla (kiremit gibi).
-4. Kapatma katmanını en az 20-30 cm kalınlığında yap — ince katman yağmuru geçirir.
-5. Yerin altına, vücudunla soğuk zemin arasına yaprak/ot/dal döşeyerek izolasyon ekle (bkz. doküman 09).
+## Steps
+1. Tie a main support branch (a ridge pole) horizontally between two trees (or a tree and a stake driven into the ground), at about waist height.
+2. With the back facing into the wind, lean cross-branches against the ridge pole at roughly a 45-degree angle.
+3. Cover the cross-branches with branches/leaves/grass, thickest to thinnest, layering from bottom to top (like roof tiles) so water runs off.
+4. Make the covering layer at least 20-30 cm thick — a thin layer lets rain through.
+5. Add insulation between you and the cold ground by laying down leaves/grass/branches underneath (see document 09).
 
-## Ne Zaman Dikkatli Olmalısın
-Lean-to açık taraftan rüzgar alır — rüzgar yönünü doğru okuyup kapalı tarafı rüzgara çevirmek şart, aksi halde barınak işe yaramaz.
+## When to Be Careful
+A lean-to is open on one side to the wind — reading the wind direction correctly and facing the closed side into it is essential, otherwise the shelter won't do its job.
 
-## Kaynak
-Genel bushcraft/wilderness survival eğitiminde standart olarak öğretilen bir barınak tekniği.
+## Reference
+A standard shelter technique widely taught in general bushcraft/wilderness survival training.

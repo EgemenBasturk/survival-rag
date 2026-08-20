@@ -1,27 +1,27 @@
 ---
-title: Sinyal Ateşi — Üçlü Düzen (Uluslararası Tehlike İşareti) ve Duman Rengi
-category: Sinyal ve Kurtarma
+title: Signal Fires — The Rule of Three and Smoke Color
+category: Signaling & Rescue
 id: DOC-SIN-01
 ---
 
-# Sinyal Ateşi — Üçlü Düzen (Uluslararası Tehlike İşareti) ve Duman Rengi
+# Signal Fires — The Rule of Three and Smoke Color
 
-## Amaç
-Ateşi sadece ısınmak için değil, dikkat çekmek için kullanmayı öğrenmek — üç ateş, uluslararası olarak tanınan bir tehlike/yardım çağrısıdır.
+## Purpose
+Learning to use fire not just for warmth but to attract attention — three fires is an internationally recognised distress/help signal.
 
-## Güvenlik Uyarısı
-Sinyal ateşlerini kontrolsüz bırakma, çevredeki bitki örtüsüne sıçramasını önle. Malzemeyi önceden hazırlayıp sadece uçak/gemi görünce tutuştur — boşuna tüketme.
+## Safety Warning
+Don't leave signal fires uncontrolled, prevent them from catching surrounding vegetation. Prepare the material in advance and only light it when you actually spot a plane/ship — don't waste it.
 
-## Adımlar
-1. Üç ateşi, birbirine eşit uzaklıkta (üçgen şeklinde veya düz bir hat üzerinde) hazırla — üç ayrı ateş uluslararası tanınan genel tehlike sinyalidir.
-2. Ateşleri açık ve yüksekten görülebilecek bir alanda (kıyı, tepe, açık alan) kur.
-3. Malzemeyi (kav-çıra-odun, bkz. doküman 16) önceden hazırla ama tutuşturma — bir uçak/gemi sesi/görüntüsü fark edince hemen üç ateşi birden yak.
-4. **Beyaz/gri duman için:** yeşil yapraklar, taze/nemli bitki ekle — gündüz görünürlüğü artırır.
-5. **Koyu/siyah duman için:** yağlı malzeme ekle — açık, kar gibi arka planlarda daha görünür olabilir.
-6. Gece ise duman yerine doğrudan alevin kendisi (üç ayrı ateş) sinyal görevi görür.
+## Steps
+1. Prepare three fires, equally spaced (in a triangle or a straight line) — three separate fires is an internationally recognised general distress signal.
+2. Build the fires in an open, elevated, visible area (coastline, hilltop, open ground).
+3. Prepare the material (tinder-kindling-fuel, see document 16) in advance but don't light it — light all three fires the moment you hear/see a plane or ship.
+4. **For white/grey smoke:** add green leaves, fresh/moist plant matter — increases daytime visibility.
+5. **For dark/black smoke:** add oily material — can be more visible against a light background like snow.
+6. At night, use the flames themselves (three separate fires) instead of smoke as the signal.
 
-## Ne Zaman Dikkatli Olmalısın
-Tek bir ateş sıradan bir kamp ateşiyle karıştırılabilir — sinyal etkisi için mutlaka üç ayrı ateş kullan.
+## When to Be Careful
+A single fire can be mistaken for an ordinary campfire — always use three separate fires for the signaling effect.
 
-## Kaynak
-Genel uluslararası tehlike sinyali pratiği — "üç" sayısı (üç ateş, üç düdük vb.) kurtarma ve dağcılık eğitiminde evrensel bir tehlike işareti olarak kabul edilir.
+## Reference
+A general international distress-signal practice — the number "three" (three fires, three whistles, etc.) is universally recognised as a distress signal in rescue and mountaineering training.

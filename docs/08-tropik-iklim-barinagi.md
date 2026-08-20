@@ -1,26 +1,26 @@
 ---
-title: Tropik / Sıcak İklim Barınağı — Yerden Yükseltme, Gölge, Havalandırma
-category: Barınak
+title: Tropical / Hot Climate Shelter — Elevation, Shade, Ventilation
+category: Shelter
 id: DOC-BRN-04
 ---
 
-# Tropik / Sıcak İklim Barınağı — Yerden Yükseltme, Gölge, Havalandırma
+# Tropical / Hot Climate Shelter — Elevation, Shade, Ventilation
 
-## Amaç
-Sıcak ve nemli iklimde asıl tehlike soğuk değil; aşırı ısı, nem, böcekler ve zeminden gelen rutubettir. Barınak buna göre tasarlanmalıdır.
+## Purpose
+In a hot, humid climate the real danger isn't cold — it's excess heat, moisture, insects, and dampness rising from the ground. The shelter should be designed accordingly.
 
-## Güvenlik Uyarısı
-Zeminde uyumak böcek, yılan ve nem riskini artırır; gölgesiz alanda uzun süre kalmak güneş çarpmasına yol açabilir (bkz. doküman 39).
+## Safety Warning
+Sleeping on the ground raises insect, snake, and moisture risk; staying in an unshaded area for long periods can cause heatstroke (see document 39).
 
-## Adımlar
-1. Zeminden en az 30-50 cm yükseltilmiş bir platform yap (dallardan basit bir sedir) — böcek, nem ve sürüngenlerden uzak durmak için.
-2. Platformun üstüne geniş yapraklarla gölge/çatı oluştur, eğimli yap ki yağmur aksın.
-3. Yanları tamamen kapatma — sıcak iklimde havalandırma, nem birikimini ve bunaltıyı önlemek için önemlidir.
-4. Gündüz doğrudan güneşten, gece rüzgardan korunacak bir konum seç.
-5. Böcek yoğunluğu fazlaysa, barınağın rüzgar üstü tarafında hafif dumanlı bir ateş böcek kaçırmaya yardımcı olabilir (doküman 20'deki ateş güvenliğine dikkat ederek).
+## Steps
+1. Build a platform raised at least 30-50 cm off the ground (a simple frame of branches) to stay away from insects, moisture, and reptiles.
+2. Build shade/a roof over the platform with broad leaves, angled so rain runs off.
+3. Don't fully enclose the sides — in a hot climate, ventilation is important to prevent moisture buildup and stifling heat.
+4. Choose a spot protected from direct sun during the day and from wind at night.
+5. If insect density is high, a light, smoky fire on the windward side of the shelter can help repel them (following the fire-safety guidance in document 20).
 
-## Ne Zaman Dikkatli Olmalısın
-Soğuk iklim barınağının aksine burada "sıkı kapatma" yanlıştır — tropik barınakta asıl düşman nem ve aşırı ısıdır, kapalı barınak bunu artırır.
+## When to Be Careful
+Unlike a cold-climate shelter, "sealing it tight" is wrong here — in a tropical shelter the real enemies are moisture and excess heat, and an enclosed shelter makes that worse.
 
-## Kaynak
-Genel tropik iklim hayatta kalma pratiği — bushcraft ve doğa eğitimlerinde tutarlı şekilde geçen prensipler.
+## Reference
+General tropical-climate survival practice — principles consistently found in bushcraft and outdoor training.

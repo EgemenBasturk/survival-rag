@@ -1,26 +1,26 @@
 ---
-title: Ses ve Görsel Sinyaller — Düdük, Üçlü Kural, Gece Sinyalleri
-category: Sinyal ve Kurtarma
+title: Sound and Visual Signals — Whistle, Rule of Three, Night Signals
+category: Signaling & Rescue
 id: DOC-SIN-05
 ---
 
-# Ses ve Görsel Sinyaller — Düdük, Üçlü Kural, Gece Sinyalleri
+# Sound and Visual Signals — Whistle, Rule of Three, Night Signals
 
-## Amaç
-Görsel sinyallerin (ateş, ayna, yer işareti) yanında, sesle ve gece koşullarında dikkat çekme yöntemlerini bilmek.
+## Purpose
+Knowing how to attract attention with sound and in nighttime conditions, alongside visual signals (fire, mirror, ground markings).
 
-## Güvenlik Uyarısı
-Bağırarak ses çıkarmak sesini/enerjini hızla tüketir — düdük gibi araçlar çok daha verimlidir, mümkünse onu tercih et.
+## Safety Warning
+Shouting to make noise drains your voice/energy quickly — a tool like a whistle is far more efficient, prefer that if you have one.
 
-## Adımlar
-1. **Üçlü kural:** Herhangi bir sinyal — üç düdük sesi, üç bağırış, üç ışık yanıp sönmesi — uluslararası olarak tanınan bir tehlike işaretidir. Tekli/rastgele sesler bu kadar net anlaşılmaz.
-2. **Düdük:** Sesini korumak için, elindeyse bir düdük kullan — ses çok daha uzağa ve enerji harcamadan taşınır.
-3. **Telefon feneri (gece):** Gece görünürlüğü olan bir hedef (uçak, gemi ışığı) fark edince, telefonun fenerini üç kısa yanıp söndürme düzeninde kullan, tekrarla.
-4. **Renkli/parlak nesneler:** Elindeki parlak renkli bir kumaşı sallayarak hareket yaratmak, sabit nesnelerden daha dikkat çekicidir — hareket, insan gözünün en kolay yakaladığı şeydir.
-5. Bir sinyal fırsatını (uçak sesi, gemi görüntüsü) fark ettiğinde, elinde hangi yöntem hazırsa (ayna, ateş, düdük, ışık) hemen ve kararlı şekilde uygula — tereddüt fırsatı kaçırabilir.
+## Steps
+1. **Rule of three:** Any signal — three whistle blasts, three shouts, three flashes of light — is internationally recognised as a distress signal. A single/random sound isn't understood as clearly.
+2. **Whistle:** If you have one, use a whistle to save your voice — sound carries much further with far less energy than shouting.
+3. **Phone flashlight (at night):** When you spot a target with nighttime visibility (a plane, a ship's light), flash your phone's light in a pattern of three short bursts, and repeat.
+4. **Bright/colorful objects:** Waving a bright, colorful piece of cloth to create motion draws more attention than a stationary object — motion is one of the easiest things for the human eye to catch.
+5. The moment you notice a signaling opportunity (a plane sound, a ship in sight), immediately and decisively use whatever method you have ready (mirror, fire, whistle, light) — hesitation can cost you the opportunity.
 
-## Ne Zaman Dikkatli Olmalısın
-Sinyal fırsatları genelde kısa sürer — bu yüzden sinyal araçlarını (düdük, ayna, fener) her zaman erişilebilir, üstünde taşı; "barınakta bıraktım" en sık yapılan hatadır.
+## When to Be Careful
+Signaling opportunities are usually brief — always carry your signaling tools (whistle, mirror, flashlight) on you, accessible; "I left it at the shelter" is the most common mistake.
 
-## Kaynak
-Genel kurtarma sinyali pratiği — "üçlü kural" (rule of three signals), dağcılık ve arama-kurtarma eğitiminde evrensel olarak kabul edilen bir sinyal standardıdır.
+## Reference
+A general rescue signaling practice — the "rule of three signals" is a universally accepted signaling standard in mountaineering and search-and-rescue training.

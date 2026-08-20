@@ -1,26 +1,26 @@
 ---
-title: Debris Hut — Yaprak ve Dal Yığınıyla Soğuğa Karşı Barınak
-category: Barınak
+title: Debris Hut — Cold-Weather Shelter from Leaves and Branches
+category: Shelter
 id: DOC-BRN-03
 ---
 
-# Debris Hut — Yaprak ve Dal Yığınıyla Soğuğa Karşı Barınak
+# Debris Hut — Cold-Weather Shelter from Leaves and Branches
 
-## Amaç
-Tamamen doğal malzemeyle yapılan, soğuk gecelerde lean-to'dan daha etkili izolasyon sağlayan bir barınak tipi.
+## Purpose
+A shelter built entirely from natural material, providing better insulation than a lean-to on cold nights.
 
-## Güvenlik Uyarısı
-Yığın çok ağır olursa çökme riski taşır — iskelet dallarını sağlam ve kalın seç.
+## Safety Warning
+If the pile is too heavy it risks collapsing — choose sturdy, thick frame branches.
 
-## Adımlar
-1. Uzun bir ana destek dalını (senin boyundan biraz uzun), bir kütük veya kayaya yaslayarak eğik bir "iskelet" oluştur.
-2. İskelete yanlardan çapraz dallar ekleyerek kaburga şeklinde bir çerçeve oluştur — vücudunun ancak sığacağı kadar dar tut, dar alan daha çabuk ısınır.
-3. Çerçevenin üzerini yaprak, ot, çam dalı gibi malzemeyle en az 60-90 cm kalınlığında kapla — kalınlık izolasyon demektir.
-4. Girişi mümkün olduğunca küçük tut, içeri girdikten sonra girişi de yaprak/çalıyla kapatabilecek şekilde bırak.
-5. İçine girmeden önce zemine kalın bir yaprak/ot döşeği ser — yerden gelen soğuk barınağın en büyük zayıf noktasıdır.
+## Steps
+1. Lean a long main support branch (a bit longer than your height) against a log or rock to form an angled "skeleton."
+2. Add cross-branches from the sides onto the skeleton to form a rib-like frame — keep it just wide enough to fit your body, a narrow space heats up faster.
+3. Cover the frame with leaves, grass, pine branches, etc. to a thickness of at least 60-90 cm — thickness equals insulation.
+4. Keep the entrance as small as possible, and leave it so you can close it with leaves/brush after you get in.
+5. Before getting in, lay down a thick bed of leaves/grass on the ground — the cold coming up from the ground is the shelter's biggest weak point.
 
-## Ne Zaman Dikkatli Olmalısın
-"İnce ama geniş" değil, "dar ama kalın" barınak daha sıcak tutar — çoğu kişi barınağı gereğinden büyük yapıp izolasyonu ihmal eder.
+## When to Be Careful
+Not "thin but wide" — "narrow but thick" keeps you warmer. Most people make their shelter bigger than it needs to be and neglect the insulation.
 
-## Kaynak
-Genel bushcraft/wilderness survival eğitiminde standart olarak öğretilen bir soğuk iklim barınak tekniği.
+## Reference
+A standard cold-climate shelter technique widely taught in general bushcraft/wilderness survival training.

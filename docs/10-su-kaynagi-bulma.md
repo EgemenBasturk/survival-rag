@@ -1,26 +1,26 @@
 ---
-title: Su Kaynağı Bulma — Yağmur, Çiy, Bitki Suyu, Kum Kuyusu
-category: Su
+title: Finding Water Sources — Rain, Dew, Plant Moisture, Sand Wells
+category: Water
 id: DOC-SU-01
 ---
 
-# Su Kaynağı Bulma — Yağmur, Çiy, Bitki Suyu, Kum Kuyusu
+# Finding Water Sources — Rain, Dew, Plant Moisture, Sand Wells
 
-## Amaç
-Tatlı su bulunamayan bir alanda alternatif su kaynaklarını tanımak.
+## Purpose
+Recognising alternative water sources when fresh water can't be found.
 
-## Güvenlik Uyarısı
-Bu dokümandaki yöntemler suyu "toplamak" içindir, içmeden önce mutlaka arıtma uygula (bkz. doküman 12-14). Toplanan hiçbir suyu doğrudan içme.
+## Safety Warning
+The methods in this document are for collecting water — always purify before drinking (see documents 12-14). Never drink any collected water directly.
 
-## Adımlar
-1. **Yağmur suyu:** En güvenli kaynaklardan biri — geniş bir yüzeye (yaprak, bez, plastik) toplayıp bir kaba akıt.
-2. **Çiy toplama:** Sabah erken saatte, temiz bir bez/giysiyle bitki örtüsü üzerindeki çiyi sıyırıp bir kaba sık.
-3. **Bitki suyu:** Bazı bitki gövdelerinde su bulunabilir — ama tanımadığın bitkiyi kesip suyunu içme, botanik bilgi gerektirir (bkz. doküman 28).
-4. **Kum/kıyı kuyusu:** Kıyıdan geriye, gelgit hattının üzerinde kumda bir çukur kaz — sızan su genelde deniz suyundan daha az tuzlu olur ama yine de arıtma gerektirir (bkz. doküman 11).
-5. **Bitki örtüsü takibi:** Daha yeşil ve yoğun bitki örtüsü olan alanlar genelde yakınlarda nem/su kaynağı olduğuna işaret eder.
+## Steps
+1. **Rainwater:** One of the safest sources — collect it on a wide surface (leaf, cloth, plastic) and funnel it into a container.
+2. **Dew collection:** Early in the morning, wipe dew off vegetation with a clean cloth/garment and wring it into a container.
+3. **Plant moisture:** Some plant stems may contain water — but don't cut and drink from an unfamiliar plant, that requires botanical knowledge (see document 28).
+4. **Sand/beach well:** Dig a pit in the sand above the tide line, back from the shore — the water that seeps in is usually less salty than seawater, but still needs purifying (see document 11).
+5. **Follow the vegetation:** Areas with greener, denser vegetation usually indicate a nearby moisture/water source.
 
-## Ne Zaman Dikkatli Olmalısın
-Durgun, kokulu, renkli veya köpüklü su kaynaklarından uzak dur — bu görsel işaretler, kaynatarak arıtsan dahi o kaynağı tercih etmemen gerektiğinin belirtisidir.
+## When to Be Careful
+Stay away from stagnant, foul-smelling, discoloured, or foamy water sources — these visual signs mean you should avoid that source even if you plan to boil it.
 
-## Kaynak
-Genel su bulma teknikleri — çölde/adada hayatta kalma eğitiminde standart olarak yer alan yöntemler.
+## Reference
+General water-finding techniques — standard methods taught in desert/island survival training.

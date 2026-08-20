@@ -1,26 +1,26 @@
 ---
-title: Kaynatarak Arıtma — Süre ve Yükseklik Faktörü
-category: Su
+title: Purifying Water by Boiling — Time and Altitude
+category: Water
 id: DOC-SU-03
 ---
 
-# Kaynatarak Arıtma — Süre ve Yükseklik Faktörü
+# Purifying Water by Boiling — Time and Altitude
 
-## Amaç
-Suyu mikrobiyolojik olarak güvenli hale getirmenin en güvenilir yöntemi olan kaynatmayı doğru uygulamak.
+## Purpose
+Applying correctly the single most reliable method for making water microbiologically safe: boiling.
 
-## Güvenlik Uyarısı
-Kaynatma kimyasal kirleticileri gidermez — sadece bakteri, virüs ve parazitleri öldürür. Suyun rengi/kokusu şüpheliyse (yakında bir kimyasal kaynak olabileceğini düşünüyorsan) başka bir kaynak ara.
+## Safety Warning
+Boiling does not remove chemical contaminants — it only kills bacteria, viruses, and parasites. If the water's colour or smell is suspicious (you suspect a nearby chemical source), find a different source.
 
-## Adımlar
-1. Suyu, mümkünse önce doküman 14'teki gibi kaba parçacıklardan (yaprak, çakıl) süz.
-2. Suyu bir kapta tam kaynama noktasına (kabarcıkların sürekli ve şiddetli çıktığı nokta) getir.
-3. Deniz seviyesine yakın, düşük rakımdaysan (yaklaşık 2000 metre altı) suyu **en az 1 dakika** kaynat.
-4. Yüksek rakımdaysan (yaklaşık 2000 metre üstü) suyu **en az 3 dakika** kaynat — yükseklik arttıkça su daha düşük sıcaklıkta kaynadığı için daha uzun süre gerekir.
-5. Kaynattıktan sonra suyu kapalı tut, soğumasını bekle.
+## Steps
+1. If possible, first strain the water through coarse particles (leaves, gravel) as in document 14.
+2. Bring the water to a full rolling boil (the point where bubbles are constant and vigorous).
+3. At low altitude, near sea level (below roughly 2,000 metres), boil the water for **at least 1 minute**.
+4. At high altitude (above roughly 2,000 metres), boil the water for **at least 3 minutes** — as altitude increases, water boils at a lower temperature, so a longer time is needed.
+5. After boiling, keep the water covered and let it cool.
 
-## Ne Zaman Dikkatli Olmalısın
-"Su kaynadı, kabarcık çıktı, tamam" deyip hemen ocaktan almak yaygın bir hatadır — süre saymak (1 veya 3 dakika) şarttır, kısa süreli kaynatma yeterli dezenfeksiyon sağlamayabilir.
+## When to Be Careful
+A common mistake is saying "it boiled, bubbles came up, that's enough" and taking it off the heat right away — timing the boil (1 or 3 minutes) matters, a brief boil may not disinfect it sufficiently.
 
-## Kaynak
-CDC (ABD Hastalık Kontrol ve Önleme Merkezleri) su dezenfeksiyon rehberi — 6500 fit (~2000 metre) altı için 1 dakika, üstü için 3 dakika kaynatma önerisi. Kaynak: wwwnc.cdc.gov/travel/page/water-disinfection
+## Reference
+CDC (U.S. Centers for Disease Control and Prevention) water disinfection guidance — recommends boiling for 1 minute below 6,500 feet (~2,000 m), and 3 minutes above that. Source: wwwnc.cdc.gov/travel/page/water-disinfection

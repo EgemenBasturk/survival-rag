@@ -1,27 +1,27 @@
 ---
-title: Barınak Yeri Seçimi — Gelgit, Sel, Rüzgar ve Ağaç Riskleri
-category: Barınak
+title: Choosing a Shelter Site — Tides, Floods, Wind, and Tree Hazards
+category: Shelter
 id: DOC-BRN-01
 ---
 
-# Barınak Yeri Seçimi — Gelgit, Sel, Rüzgar ve Ağaç Riskleri
+# Choosing a Shelter Site — Tides, Floods, Wind, and Tree Hazards
 
-## Amaç
-Barınağı kurmadan önce güvenli ve verimli bir yer seçmek — yanlış yer seçimi tüm emeği boşa çıkarabilir.
+## Purpose
+Choosing a safe and effective site before building your shelter — the wrong location can waste all your effort.
 
-## Güvenlik Uyarısı
-Gelgit hattına yakın kurulan barınak gece su altında kalabilir; kuru dere yatakları ani sel riski taşır; üzerinde çürük/ölü dalı olan ağaçların altı düşme riski taşır.
+## Safety Warning
+A shelter built too close to the tide line can end up underwater at night; dry-looking stream beds carry flash flood risk; areas under trees with dead/rotting branches carry a falling-branch risk.
 
-## Adımlar
-1. Gelgit hattından (en yüksek su izinden — yosun/döküntü çizgisinden) en az birkaç metre yukarıda ve geride bir yer seç.
-2. Kuru görünen dere yataklarından ve çukur alanlardan kaçın — ani yağış sel oluşturabilir.
-3. Rüzgara karşı doğal bir bariyer (kayalık, yoğun bitki örtüsü) olan yer tercih et, ama tam tepe noktasından kaçın — rüzgar orada en güçlüdür.
-4. Üzerinde ölü/çürük dal barındıran ağaçların altını işaretle ve kaçın.
-5. Su kaynağına makul mesafede ama tam kıyısına değil, biraz uzağına kur — böcek ve hayvan trafiği kıyıda yoğun olur.
-6. Sinyal verme ihtimalini de düşün — tamamen kapalı bir alan yerine, gerektiğinde açık alana/kıyıya erişimin olsun.
+## Steps
+1. Choose a spot at least several metres above and back from the tide line (the high-water mark — the line of seaweed/debris).
+2. Avoid dry-looking stream beds and low, hollow areas — sudden rain can create a flash flood.
+3. Prefer a spot with a natural windbreak (rocks, dense vegetation), but avoid the very top of a hill — wind is strongest there.
+4. Mark and avoid the area under any tree with dead or rotting branches.
+5. Build within reasonable distance of a water source but not right at its edge — insect and animal traffic is heaviest right at the water's edge.
+6. Also think about signaling — instead of a fully enclosed area, keep access to open ground/coastline when needed.
 
-## Ne Zaman Dikkatli Olmalısın
-"En rahat görünen yer" ile "en güvenli yer" her zaman aynı değildir — gölgeli, düz, yumuşak zeminli bir yer sel yatağı olabilir.
+## When to Be Careful
+The "most comfortable-looking spot" and the "safest spot" aren't always the same — a shaded, flat, soft-ground area could be a flood bed.
 
-## Kaynak
-Genel bushcraft ve doğa yürüyüşü güvenlik eğitiminde tutarlı şekilde yer alan, yaygın kabul görmüş bir yer seçim pratiği.
+## Reference
+A widely accepted site-selection practice, consistent across general bushcraft and wilderness hiking safety training.

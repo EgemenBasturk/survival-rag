@@ -1,26 +1,26 @@
 ---
-title: Yalıtım — Yerden Gelen Soğuğu Kesme
-category: Barınak
+title: Insulation — Blocking Cold from the Ground
+category: Shelter
 id: DOC-BRN-05
 ---
 
-# Yalıtım — Yerden Gelen Soğuğu Kesme
+# Insulation — Blocking Cold from the Ground
 
-## Amaç
-"Ateş yaktım ama hâlâ üşüyorum" sorununun en sık nedeni, üstten değil zeminden kaybedilen ısıdır — bu doküman bu boşluğu kapatır.
+## Purpose
+The most common reason for "I built a fire but I'm still cold" is heat lost through the ground, not from above — this document fills that gap.
 
-## Güvenlik Uyarısı
-Yerde doğrudan yatmak, ıslak/soğuk zeminle uzun temas hipotermi riskini ciddi şekilde artırır (bkz. doküman 35).
+## Safety Warning
+Lying directly on the ground, in prolonged contact with cold/wet ground, significantly raises the risk of hypothermia (see document 35).
 
-## Adımlar
-1. Uyumadan/dinlenmeden önce, zeminle vücudun arasına en az 10-15 cm kalınlığında kuru yaprak, ot, çam dalı, kabuk gibi malzeme ser.
-2. Malzeme ne kadar kuru olursa izolasyon o kadar iyi olur — nemli yaprak neredeyse hiç izolasyon sağlamaz, önce kurutmayı dene.
-3. Döşeği vücudunun tüm uzunluğunu ve genişliğini kaplayacak şekilde yay, sadece sırtın değil yanların da zeminden ayrılsın.
-4. Mümkünse ikinci bir katman daha ekle, özellikle kalça ve omuz gibi baskı noktalarının altına.
-5. Sabah nemlenen döşeği güneşte kurutup tekrar kullanabilirsin.
+## Steps
+1. Before resting or sleeping, lay down at least 10-15 cm of dry leaves, grass, pine branches, or bark between yourself and the ground.
+2. The drier the material, the better the insulation — damp leaves provide almost no insulation, so dry it first if you can.
+3. Spread the bedding wide enough to cover your full body length, so your sides are off the ground too, not just your back.
+4. Add a second layer if possible, especially under pressure points like your hips and shoulders.
+5. In the morning, you can dry out the dampened bedding in the sun and reuse it.
 
-## Ne Zaman Dikkatli Olmalısın
-Çoğu kişi enerjisini ateşe ve barınağın üst kısmına harcar, zemin izolasyonunu atlar — oysa vücut ısısının büyük kısmı doğrudan temasla zemine kaçar.
+## When to Be Careful
+Most people spend their energy on the fire and the top of the shelter, and neglect ground insulation — yet a large share of body heat escapes through direct contact with the ground.
 
-## Kaynak
-Genel soğuktan korunma / hipotermi önleme prensipleri — bushcraft eğitiminde standart bir konu.
+## Reference
+General cold-protection / hypothermia-prevention principles — a standard topic in bushcraft training.

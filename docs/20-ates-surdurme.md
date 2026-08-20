@@ -1,27 +1,27 @@
 ---
-title: Ateşi Gece Boyunca Sürdürme ve Güvenlik Önlemleri
-category: Ateş
+title: Keeping a Fire Going Overnight and Safety Precautions
+category: Fire
 id: DOC-ATS-05
 ---
 
-# Ateşi Gece Boyunca Sürdürme ve Güvenlik Önlemleri
+# Keeping a Fire Going Overnight and Safety Precautions
 
-## Amaç
-Bir kez yakılan ateşi enerji israf etmeden, güvenli şekilde uzun süre canlı tutmak.
+## Purpose
+Keeping a fire alive safely for a long time, once lit, without wasting energy.
 
-## Güvenlik Uyarısı
-Ateşi barınağın içinde/çok yakınında bırakıp uyuma — karbonmonoksit ve yangın riski taşır. Rüzgarlı havada kıvılcım sıçraması kuru bitki örtüsünü tutuşturabilir, ateşin etrafını mutlaka temizle.
+## Safety Warning
+Leaving a fire in/right next to your shelter while you sleep carries carbon monoxide and fire risk. In windy weather, flying sparks can ignite dry vegetation — always clear the area around the fire.
 
-## Adımlar
-1. Ateşin etrafındaki yanıcı bitki örtüsünü (kuru ot, yaprak) en az 1 metre çapında temizle.
-2. Uzun süre yanan kalın odun parçalarını akşamdan hazırla, ateşe kademeli ekle — büyük parçalar yavaş yanar, geceyi daha az müdahaleyle geçirmeni sağlar.
-3. Ateşi bir kayaya/toprak sete yaslayarak ısıyı barınağına doğru yansıt.
-4. Ateş küçük ve kontrollü olsun — büyük ateş fazla odun tüketir, küçük-verimli ateş daha sürdürülebilirdir.
-5. Uyumadan önce ateşi tamamen söndürmek yerine, közleyip sabah kolayca canlandırabileceğin hale getir — ama barınağın içinde asla açık ateş bırakma.
-6. Sabah ilk iş olarak ateşi kontrol et, gerekirse ince çıra ekleyerek canlandır.
+## Steps
+1. Clear flammable vegetation (dry grass, leaves) at least 1 metre around the fire.
+2. Prepare thick, long-burning wood pieces in the evening, add them gradually — large pieces burn slowly, letting you get through the night with less tending.
+3. Lean the fire against a rock/earth bank to reflect heat toward your shelter.
+4. Keep the fire small and controlled — a big fire uses a lot of wood, a small, efficient fire is more sustainable.
+5. Instead of putting the fire out completely before sleeping, bank it down to embers so it's easy to revive in the morning — but never leave an open flame inside your shelter.
+6. First thing in the morning, check the fire and add fine kindling to revive it if needed.
 
-## Ne Zaman Dikkatli Olmalısın
-Gece yarısı uyanıp ateşin söndüğünü görmek yaygın bir sorundur — akşam hazırladığın kalın odun stoku bunu önler, gece ortasında malzeme aramak zorunda kalma.
+## When to Be Careful
+Waking up in the middle of the night to find the fire out is a common problem — the thick wood stock you prepared in the evening prevents this, so you don't have to search for material in the dark.
 
-## Kaynak
-Genel bushcraft ateş yönetimi — hayatta kalma eğitiminde standart olarak öğretilen ateş sürdürme ve güvenlik pratiği.
+## Reference
+General bushcraft fire management — sustaining and safety practices standard in survival training.

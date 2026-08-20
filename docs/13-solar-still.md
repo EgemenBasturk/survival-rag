@@ -1,28 +1,28 @@
 ---
-title: Güneş Enerjili Damıtma (Solar Still) — Deniz Suyunu İçilebilir Yapma
-category: Su
+title: Solar Still — Making Seawater Drinkable
+category: Water
 id: DOC-SU-04
 ---
 
-# Güneş Enerjili Damıtma (Solar Still) — Deniz Suyunu İçilebilir Yapma
+# Solar Still — Making Seawater Drinkable
 
-## Amaç
-Tatlı su hiç bulunamadığında, deniz suyundan veya nemli topraktan güneş enerjisiyle buharlaştırma yoluyla içilebilir su üretmek.
+## Purpose
+When fresh water can't be found at all, producing drinkable water from seawater or damp soil using solar evaporation.
 
-## Güvenlik Uyarısı
-Bu yöntem yavaştır ve günde küçük miktarlarda su üretir — tek kaynak olarak güvenme, diğer yöntemlerle (yağmur, çiy) birlikte kullan.
+## Safety Warning
+This method is slow and produces only small amounts of water per day — don't rely on it alone, combine it with other methods (rain, dew).
 
-## Adımlar
-1. Güneş alan bir yerde yaklaşık 50-60 cm derinliğinde bir çukur kaz.
-2. Çukurun ortasına, ağzı açık bir toplama kabı (varsa kesilmiş şişe dibi) yerleştir.
-3. Çukurun tabanına, kabın etrafına deniz suyuyla ıslatılmış kum veya nemli bitki parçaları yerleştir — kabın içine su koyma, sadece etrafına.
-4. Çukurun üstünü şeffaf bir plastikle kapat, kenarlarını kum/taşla sıkıca bastır ki hava kaçmasın.
-5. Plastiğin ortasına küçük bir taş koyarak, toplama kabının tam üstünde bir çukur/koni oluştur.
-6. Güneş ısısıyla nem buharlaşıp plastiğin iç yüzeyinde yoğunlaşır, koni sayesinde damlalar kaba akar.
-7. Su gün boyunca yavaş yavaş birikir — düzenli kontrol et, kabı boşaltıp devam ettir.
+## Steps
+1. Dig a pit about 50-60 cm deep in a sunny spot.
+2. Place an open collection container (e.g., the cut-off bottom of a bottle) in the centre of the pit.
+3. Around the container (not inside it), place sand or moist plant matter soaked in seawater.
+4. Cover the top of the pit with clear plastic, pressing the edges down firmly with sand/rocks so no air escapes.
+5. Place a small stone in the centre of the plastic to create a low point/cone directly above the collection container.
+6. The sun's heat evaporates the moisture, which condenses on the inside of the plastic, and the cone directs the drops into the container.
+7. Water collects slowly throughout the day — check regularly, empty the container, and keep going.
 
-## Ne Zaman Dikkatli Olmalısın
-Bu yöntemle elde edilen su az miktarda olur — susuzluğun ilerlemiş olduğu durumlarda tek başına yeterli olmayabilir, diğer su bulma yöntemleriyle birlikte uygula.
+## When to Be Careful
+The water produced by this method is limited — in cases of advanced dehydration it may not be enough on its own, combine it with other water-finding methods.
 
-## Kaynak
-Genel çöl/ada hayatta kalma tekniği — solar still, hayatta kalma eğitiminde standart olarak öğretilen bir su damıtma yöntemidir.
+## Reference
+General desert/island survival technique — the solar still is a standard water distillation method taught in survival training.

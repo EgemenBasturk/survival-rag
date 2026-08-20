@@ -1,31 +1,31 @@
 ---
-title: Karar Ağacı — Burada Kalmalı mıyım, Hareket mi Etmeliyim?
-category: Sinyal ve Kurtarma
+title: Decision Tree — Should I Stay or Should I Move?
+category: Signaling & Rescue
 id: DOC-SIN-04
 ---
 
-# Karar Ağacı — Burada Kalmalı mıyım, Hareket mi Etmeliyim?
+# Decision Tree — Should I Stay or Should I Move?
 
-## Amaç
-Kurtarma beklerken yerinde kalmak mı, yoksa aktif olarak yardım aramaya gitmek mi daha doğru — bu kararı sistematik değerlendirmek.
+## Purpose
+Systematically evaluating whether it's better to stay put and wait for rescue, or to actively move to seek help.
 
-## Güvenlik Uyarısı
-Bu kararın yanlış verilmesi kurtarma ekiplerinin seni bulmasını zorlaştırabilir. Genel kural: çoğu durumda kalmak daha güvenlidir.
+## Safety Warning
+Getting this decision wrong can make it harder for rescuers to find you. General rule: in most cases, staying is safer.
 
-## Karar Ağacı
-1. **Konumunu biliyorsun ve biri seni arayacağını biliyor mu (uçuş planı, tekne rotası, tahmini dönüş zamanı paylaştın mı)?**
-   - Evet → **Kal.** Arama son bilinen konumundan başlar; yer değiştirmek seni bu alanın dışına çıkarır.
-   - Hayır/Emin değilim → Adım 2'ye geç.
-2. **Bulunduğun yer görünürlük açısından kötü mü (yoğun orman, dar koy) ve yakında belirgin şekilde daha görünür bir alan (açık kumsal, yüksek tepe) var mı?**
-   - Evet → Dikkatli, kısa mesafeli bir taşınma düşünülebilir — ama önce mevcut konumunu işaretle (bkz. doküman 23) ki oraya dönebilesin.
-   - Hayır → **Kal.**
-3. **Su/yiyecek kaynağın kritik seviyede tükeniyor mu ve yakın bir kaynak biliyor musun?**
-   - Evet, biliniyorsa → Sadece kaynağa gidip dönmeyi planla, kalıcı taşınma değil.
-   - Hayır → **Kal**, bulunduğun yerde su/barınak stratejini iyileştirmeye odaklan.
-4. Genel olarak: sağlık durumun iyi, barınağın var, su kaynağın erişilebilirse → **Kal ve enerjini sinyal/barınak/su üzerine yoğunlaştır.**
+## Decision Tree
+1. **Do you know your location, and does someone know to expect you back (a flight plan, a boat route, an expected return time you shared)?**
+   - Yes → **Stay.** Search efforts start from your last known location; moving takes you outside that search area.
+   - No/Not sure → Go to step 2.
+2. **Is your current location poor for visibility (dense forest, a narrow cove), and is there a noticeably more visible area (open beach, high hilltop) within a short walk (a few hours)?**
+   - Yes → A careful, short-distance move can be considered — but first mark your current location (see document 23) so you can return to it.
+   - No → **Stay.**
+3. **Is your water/food critically low, and do you know of a nearby source?**
+   - Yes, if known → Plan only to go to the source and back, not a permanent move.
+   - No → **Stay**, and focus on improving your water/shelter strategy where you are.
+4. In general: if your health is okay, you have shelter, and your water source is accessible → **Stay, and focus your energy on signaling/shelter/water.**
 
-## Ne Zaman Dikkatli Olmalısın
-"Bir şeyler yapmalıyım" dürtüsü seni hareket etmeye itebilir, ama gereksiz hareket enerji/su tüketir ve seni bilinen son konumundan uzaklaştırır — bu kurtarma süresini uzatabilir.
+## When to Be Careful
+The urge to "do something" can push you to move, but unnecessary movement uses up energy/water and takes you away from your last known location — this can lengthen the time it takes to be rescued.
 
-## Kaynak
-Genel arama-kurtarma prensibi — "kalmak, çoğu durumda en güvenli seçenektir" ilkesi, kurtarma eğitiminde yaygın olarak öğretilir.
+## Reference
+A general search-and-rescue principle — the idea that "staying put is the safest option in most cases" is widely taught in rescue training.

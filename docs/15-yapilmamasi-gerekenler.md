@@ -1,26 +1,26 @@
 ---
-title: ASLA Yapılmaması Gerekenler — Deniz Suyu, İdrar, Kirli Su
-category: Su
+title: NEVER Do These — Seawater, Urine, Dirty Water
+category: Water
 id: DOC-SU-06
 ---
 
-# ASLA Yapılmaması Gerekenler — Deniz Suyu, İdrar, Kirli Su
+# NEVER Do These — Seawater, Urine, Dirty Water
 
-## Amaç
-Susuzluk anında sezgisel ama tehlikeli olan "çözümlerin" neden işe yaramadığını, aksine durumu kötüleştirdiğini açıklamak.
+## Purpose
+Explaining why intuitive but dangerous "solutions" to thirst don't work, and actually make things worse.
 
-## Güvenlik Uyarısı
-Bu doküman kritiktir — buradaki hatalar susuzluğu hızlandırarak hayati risk oluşturur.
+## Safety Warning
+This document is critical — the mistakes described here accelerate dehydration and create life-threatening risk.
 
-## Adımlar (Yapılmaması Gerekenler)
-1. **Deniz suyu içme:** Deniz suyu, vücudun atabileceğinden daha yoğun tuz içerir. İçtiğin tuzu atmak için vücudun içtiğinden daha fazla su kullanır — net etki susuzluğu hızlandırmaktır. Deniz suyu ancak damıtıldıktan sonra (doküman 13) güvenlidir.
-2. **İdrar içme:** İdrar da atık tuz ve üre içerir, deniz suyuyla benzer şekilde susuzluğu artırır, ayrıca enfeksiyon riski taşır.
-3. **Bulanık/kokulu/durgun su içme (arıtmadan):** Görünür kirlilik olmasa bile mikroorganizma barındırabilir, susuzluğu ağırlaştıran bir soruna (ishal gibi) yol açabilir.
-4. **Susuzluğu geciktirmek için yiyecek yeme:** Sindirim ekstra su tüketir — susuz durumdayken az yemek, çok yemekten daha güvenlidir.
-5. **Aşırı terletici efor:** Gündüz sıcağında gereksiz fiziksel efor su kaybını hızlandırır — işleri serin saatlerde (sabah erken, akşamüstü) yapmayı tercih et.
+## Steps (Things NOT to Do)
+1. **Drinking seawater:** Seawater contains more salt than your body can excrete. Getting rid of that salt uses more water than you drank — the net effect is that it speeds up dehydration. Seawater is only safe after it's been distilled (document 13).
+2. **Drinking urine:** Urine also contains waste salt and urea, and worsens dehydration similarly to seawater, plus it carries infection risk.
+3. **Drinking cloudy/foul-smelling/stagnant water (without purifying):** Even without visible contamination it may harbor microorganisms, which can lead to a problem (like diarrhea) that worsens dehydration.
+4. **Eating to delay thirst:** Digestion uses extra water — while dehydrated, eating less is safer than eating more.
+5. **Excessive, sweat-inducing exertion:** Unnecessary physical effort in the daytime heat speeds up water loss — prefer doing tasks during cooler hours (early morning, late afternoon).
 
-## Ne Zaman Dikkatli Olmalısın
-Susuzluk ilerledikçe karar verme yeteneği bozulur — "biraz deniz suyu içsem sorun olmaz" düşüncesi tam da bu bozulmanın bir belirtisi olabilir.
+## When to Be Careful
+As dehydration progresses, decision-making ability deteriorates — the thought "a little seawater won't hurt" can itself be a symptom of that deterioration.
 
-## Kaynak
-Genel hayatta kalma tıbbı prensipleri — deniz suyu ve idrar tüketiminin fizyolojik etkisi, tıbbi literatürde tutarlı şekilde belgelenmiştir.
+## Reference
+General survival medicine principles — the physiological effects of seawater and urine consumption are consistently documented in medical literature.
