@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gas Field Support Agent</title>
+  <title>Castaway Survival Guide</title>
   <style>
     /* ── Base: high-contrast, large text for field use ── */
     *, *::before, *::after { box-sizing: border-box; }
     :root {
-      --bg: #0d1117;
-      --surface: #161b22;
-      --border: #30363d;
-      --text: #e6edf3;
-      --text-muted: #8b949e;
-      --accent: #58a6ff;
-      --warning: #f0883e;
+      --bg: #000000;
+      --surface: #0d0d0d;
+      --border: #2a2a2a;
+      --text: #eaeaea;
+      --text-muted: #9a9a9a;
+      --accent: #ff9f43;
+      --warning: #e3b341;
       --danger: #f85149;
       --success: #3fb950;
-      --user-bg: #1c2a3f;
-      --agent-bg: #1a1e24;
+      --user-bg: #241a10;
+      --agent-bg: #0f0f0f;
       --radius: 8px;
     }
     html { font-size: 18px; }
@@ -58,9 +58,32 @@
       border-radius: 12px;
       font-weight: 600;
     }
-    .status.online { background: #1a3a2a; color: var(--success); }
+    .status.online {
+      background: #1a3a2a;
+      color: var(--success);
+      animation: campfire-glow 3s ease-in-out infinite;
+    }
     .status.offline { background: #3a1a1a; color: var(--danger); }
     .status.loading { background: #3a2a1a; color: var(--warning); }
+    @keyframes campfire-glow {
+      0%, 100% { box-shadow: 0 0 3px 0 rgba(255,159,67,0.25); }
+      50% { box-shadow: 0 0 11px 2px rgba(255,159,67,0.55); }
+    }
+
+    /* ── Rule-of-3s priority strip ── */
+    #priority-strip {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 6px 20px;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-align: center;
+      white-space: nowrap;
+      overflow-x: auto;
+      flex-shrink: 0;
+    }
+    #priority-strip::-webkit-scrollbar { display: none; }
+    #priority-strip .arrow { color: var(--accent); margin: 0 6px; }
 
     /* ── Mode toggle ── */
     .controls {
@@ -80,6 +103,85 @@
       width: 18px;
       height: 18px;
       accent-color: var(--accent);
+    }
+
+    /* ── App body: sidebar (desktop) + main panel ── */
+    #app-body {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+      min-height: 0;
+    }
+    #sidebar {
+      width: 230px;
+      flex-shrink: 0;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      overflow-y: auto;
+      padding: 16px 0;
+    }
+    .sidebar-section { margin-bottom: 18px; padding: 0 16px; }
+    .sidebar-heading {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .sidebar-item {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      border-left: 2px solid transparent;
+      color: var(--text);
+      padding: 8px 10px;
+      margin: 2px 0;
+      font-size: 0.85rem;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      min-height: 40px;
+      touch-action: manipulation;
+      transition: border-color 0.15s, background 0.15s, color 0.15s;
+    }
+    .sidebar-item:hover {
+      border-left-color: var(--accent);
+      background: rgba(255,159,67,0.08);
+      color: var(--accent);
+    }
+    #main-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    /* ── Mobile bottom tab bar (shown only under the mobile breakpoint) ── */
+    #mobile-tabs { display: none; }
+    .tab-btn {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 2px;
+      font-size: 0.65rem;
+      cursor: pointer;
+      min-height: 48px;
+      touch-action: manipulation;
+      border-radius: 6px;
+      transition: color 0.15s, background 0.15s;
+    }
+    .tab-btn .tab-icon { font-size: 1.3rem; }
+    .tab-btn:hover, .tab-btn:active {
+      color: var(--accent);
+      background: rgba(255,159,67,0.08);
     }
 
     /* ── Chat area ── */
@@ -220,35 +322,6 @@
       opacity: 0.85;
     }
 
-    /* ── Quick actions ── */
-    #quick-actions {
-      padding: 8px 16px;
-      display: flex;
-      gap: 8px;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      background: var(--surface);
-    }
-    #quick-actions::-webkit-scrollbar { display: none; }
-    .quick-btn {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 8px 14px;
-      border-radius: 20px;
-      font-size: 0.82rem;
-      cursor: pointer;
-      white-space: nowrap;
-      flex-shrink: 0;
-      min-height: 44px;
-      touch-action: manipulation;
-      transition: border-color 0.15s;
-    }
-    .quick-btn:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
     /* ── Markdown-like rendering ── */
     .message.agent h1, .message.agent h2, .message.agent h3 {
       margin: 10px 0 6px;
@@ -261,7 +334,7 @@
     }
     .message.agent li { margin: 4px 0; }
     .message.agent code {
-      background: #0d1117;
+      background: var(--bg);
       padding: 2px 6px;
       border-radius: 3px;
       font-size: 0.9em;
@@ -383,8 +456,17 @@
     /* ── Responsive ── */
     @media (max-width: 900px) {
       .message { max-width: 95%; }
-      #quick-actions { gap: 6px; }
-      .quick-btn { padding: 6px 10px; font-size: 0.78rem; }
+    }
+    @media (max-width: 700px) {
+      #sidebar { display: none; }
+      #mobile-tabs {
+        display: flex;
+        flex-shrink: 0;
+        background: var(--surface);
+        border-top: 1px solid var(--border);
+        padding: 4px 4px calc(4px + env(safe-area-inset-bottom, 0px));
+      }
+      #priority-strip { font-size: 0.66rem; padding: 5px 12px; }
     }
     @media (max-width: 600px) {
       html { font-size: 16px; }
@@ -392,24 +474,11 @@
       header h1 { font-size: 0.95rem; gap: 6px; }
       header h1 .icon { font-size: 1.2rem; }
       header h1 .title-text { display: none; }
-      header h1::after { content: "Gas Field Support"; font-size: 0.95rem; }
+      header h1::after { content: "Survival Guide"; font-size: 0.95rem; }
       .controls { gap: 8px; }
       .toggle-label { font-size: 0.7rem; }
       .status { font-size: 0.7rem; padding: 3px 8px; }
       .message { max-width: 98%; padding: 10px 14px; }
-      #quick-actions {
-        padding: 6px 10px;
-        gap: 6px;
-        flex-wrap: wrap;
-        overflow-x: visible;
-      }
-      .quick-btn {
-        flex-shrink: 1;
-        white-space: normal;
-        padding: 8px 12px;
-        font-size: 0.78rem;
-        min-height: 40px;
-      }
       #chat { padding: 10px; gap: 12px; }
       #input-area { padding: 8px 10px; gap: 8px; }
       #input-area textarea { padding: 10px 12px; font-size: 0.95rem; }
@@ -423,8 +492,9 @@
     }
     @media (max-width: 340px) {
       html { font-size: 15px; }
-      header h1::after { content: "Gas Support"; font-size: 0.9rem; }
-      .quick-btn { padding: 6px 10px; font-size: 0.72rem; }
+      header h1::after { content: "Survival"; font-size: 0.9rem; }
+      .tab-btn { font-size: 0.6rem; }
+      .tab-btn .tab-icon { font-size: 1.1rem; }
       #send-btn { min-width: 56px; padding: 10px 12px; }
     }
   </style>
@@ -433,8 +503,8 @@
 
 <header>
   <h1>
-    <span class="icon">🔧</span>
-    <span class="title-text">Gas Field Support Agent</span>
+    <span class="icon">🏝️</span>
+    <span class="title-text">Castaway Survival Guide</span>
   </h1>
   <div class="controls">
     <label class="toggle-label">
@@ -445,34 +515,66 @@
   </div>
 </header>
 
-<div id="quick-actions">
-  <button class="quick-btn" data-q="How do I detect a gas leak?">🔍 Gas Leak Detection</button>
-  <button class="quick-btn" data-q="Low pressure downstream of regulator">⚠️ Low Pressure Fault</button>
-  <button class="quick-btn" data-q="Emergency shutdown procedure">🚨 Emergency Shutdown</button>
-  <button class="quick-btn" data-q="Pre-inspection checklist">📋 Pre-Inspection</button>
-  <button class="quick-btn" data-q="PPE requirements for gas field work">🦺 PPE Requirements</button>
-  <button class="quick-btn" data-q="No gas flow at site">🚫 No Gas Flow</button>
-  <button class="quick-btn" data-q="Pressure testing procedure">📐 Pressure Test</button>
-  <button class="quick-btn" data-q="Confined space entry procedure">⛑️ Confined Space</button>
+<div id="priority-strip">
+  💨 Air <span class="arrow">→</span> 🏠 Shelter <span class="arrow">→</span> 💧 Water <span class="arrow">→</span> 📡 Signal <span class="arrow">→</span> 🍽️ Food
+  <span style="color:var(--text-muted);">&nbsp;·&nbsp;the Rule of Threes: whichever runs out fastest matters most</span>
 </div>
 
-<div id="chat">
-  <div class="message agent">
-    <strong>⏳ Initializing...</strong><br>
-    Starting the AI model. This may take a moment on first run.<br><br>
-    <em class="init-hint">The chat will be available once the model is loaded.</em>
-  </div>
-</div>
+<div id="app-body">
+  <aside id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-heading">🆘 Priorities</div>
+      <button class="sidebar-item" data-q="What should I do first after being stranded?">What Do I Do First?</button>
+      <button class="sidebar-item" data-q="I'm panicking, what should I do?">I'm Panicking</button>
+      <button class="sidebar-item" data-q="How do I save my phone battery?">Save Phone Battery</button>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-heading">🏠 Shelter</div>
+      <button class="sidebar-item" data-q="How do I build a shelter?">Build a Shelter</button>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-heading">💧 Water</div>
+      <button class="sidebar-item" data-q="How do I purify water?">Purify Water</button>
+      <button class="sidebar-item" data-q="Can I drink seawater if I'm thirsty?">⚠️ Can I Drink Seawater?</button>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-heading">🔥 Fire</div>
+      <button class="sidebar-item" data-q="How do I start a fire without matches?">Start a Fire</button>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-heading">📡 Signal</div>
+      <button class="sidebar-item" data-q="How do I signal for rescue?">Signal for Rescue</button>
+    </div>
+  </aside>
 
-<div id="input-area">
-  <button id="upload-btn" title="Upload document to knowledge base">📄</button>
-  <textarea
-    id="user-input"
-    placeholder="Describe the issue or ask a question..."
-    rows="1"
-    autofocus
-  ></textarea>
-  <button id="send-btn">Send</button>
+  <main id="main-panel">
+    <div id="chat">
+      <div class="message agent">
+        <strong>⏳ Initializing...</strong><br>
+        Starting the AI model. This may take a moment on first run.<br><br>
+        <em class="init-hint">The chat will be available once the model is loaded.</em>
+      </div>
+    </div>
+
+    <nav id="mobile-tabs">
+      <button class="tab-btn" data-q="What should I do first after being stranded?"><span class="tab-icon">🆘</span><span class="tab-label">Priorities</span></button>
+      <button class="tab-btn" data-q="How do I build a shelter?"><span class="tab-icon">🏠</span><span class="tab-label">Shelter</span></button>
+      <button class="tab-btn" data-q="How do I purify water?"><span class="tab-icon">💧</span><span class="tab-label">Water</span></button>
+      <button class="tab-btn" data-q="How do I start a fire without matches?"><span class="tab-icon">🔥</span><span class="tab-label">Fire</span></button>
+      <button class="tab-btn" data-q="How do I signal for rescue?"><span class="tab-icon">📡</span><span class="tab-label">Signal</span></button>
+    </nav>
+
+    <div id="input-area">
+      <button id="upload-btn" title="Upload document to knowledge base">📄</button>
+      <textarea
+        id="user-input"
+        placeholder="Describe the issue or ask a question..."
+        rows="1"
+        autofocus
+      ></textarea>
+      <button id="send-btn">Send</button>
+    </div>
+  </main>
 </div>
 
 <!-- Upload Modal -->
@@ -506,7 +608,7 @@
   const sendBtn = document.getElementById('send-btn');
   const statusEl = document.getElementById('status');
   const compactToggle = document.getElementById('compact-mode');
-  const quickBtns = document.querySelectorAll('.quick-btn');
+  const quickBtns = document.querySelectorAll('.sidebar-item, .tab-btn');
 
   let sending = false;
   let conversationHistory = [];
@@ -686,15 +788,15 @@
         // Always restore the welcome message when ready
         const welcomeMsgReady = chat.querySelector('.message.agent');
         if (welcomeMsgReady) {
-          welcomeMsgReady.innerHTML = `<strong>Gas Field Support Agent – Ready</strong><br>` +
+          welcomeMsgReady.innerHTML = `<strong>Castaway Survival Guide – Ready</strong><br>` +
             `Running locally on this device. No internet connection required.<br><br>` +
             `Ask me about:<ul>` +
-            `<li>Gas leak detection &amp; safety procedures</li>` +
-            `<li>Fault diagnosis &amp; decision trees</li>` +
-            `<li>Equipment maintenance &amp; repair steps</li>` +
-            `<li>Pressure testing &amp; valve inspection</li>` +
-            `<li>PPE requirements &amp; compliance</li></ul>` +
-            `<em style="color:var(--warning);">⚠️ Always follow your site-specific safety procedures.</em>`;
+            `<li>Immediate priorities &amp; panic control</li>` +
+            `<li>Building shelter &amp; staying warm</li>` +
+            `<li>Finding &amp; purifying water</li>` +
+            `<li>Starting a fire without matches</li>` +
+            `<li>Signaling for rescue</li></ul>` +
+            `<em style="color:var(--warning);">⚠️ This is general survival information, not a substitute for professional or medical advice.</em>`;
           delete welcomeMsgReady.dataset.replaced;
         }
         break;
