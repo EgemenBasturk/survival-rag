@@ -8,6 +8,7 @@ const ROOT = path.resolve(__dirname, "..");
 export const config = {
   // Model
   model: "Phi-3.5-mini-instruct-generic-cpu:2",
+  embeddingModel: "qwen3-embedding-0.6b-generic-cpu:1",
 
   // RAG
   docsDir: path.join(ROOT, "docs"),

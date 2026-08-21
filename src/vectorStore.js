@@ -1,16 +1,28 @@
 /**
  * Local vector store backed by SQLite.
- * Stores document chunks and their term-frequency vectors for offline RAG retrieval.
+ * Stores document chunks and their embedding vectors for offline RAG retrieval.
  *
- * Performance optimisations:
- * - Inverted index: maps terms → chunk IDs for fast candidate filtering
- * - Row cache: parsed TF maps kept in memory to avoid JSON.parse on every query
- * - Prepared statements: reused across calls
+ * Retrieval is done by cosine similarity between the query's embedding and
+ * each stored chunk's embedding. With only a few dozen chunks, comparing
+ * against every row is fast enough that no index structure is needed.
  */
 import Database from "better-sqlite3";
 import path from "path";
 import fs from "fs";
-import { termFrequency, cosineSimilarity } from "./chunker.js";
+
+/** Cosine similarity between two equal-length embedding vectors. */
+function cosineSimilarity(a, b) {
+  let dot = 0;
+  let normA = 0;
+  let normB = 0;
+  for (let i = 0; i < a.length; i++) {
+    dot += a[i] * b[i];
+    normA += a[i] * a[i];
+    normB += b[i] * b[i];
+  }
+  if (normA === 0 || normB === 0) return 0;
+  return dot / (Math.sqrt(normA) * Math.sqrt(normB));
+}
 
 export class VectorStore {
   constructor(dbPath) {
@@ -22,9 +34,8 @@ export class VectorStore {
     this.db.pragma("journal_mode = WAL");
     this._init();
 
-    // In-memory caches for fast retrieval
-    this._rowCache = null;    // Array of { id, doc_id, title, category, content, tf }
-    this._invertedIndex = null; // Map<term, Set<rowIndex>>
+    // In-memory cache of parsed rows, rebuilt after any mutation
+    this._rowCache = null; // Array of { id, doc_id, title, category, content, embedding }
   }
 
   _init() {
@@ -36,14 +47,14 @@ export class VectorStore {
         category TEXT,
         chunk_index INTEGER NOT NULL,
         content TEXT NOT NULL,
-        tf_json TEXT NOT NULL
+        embedding_json TEXT NOT NULL
       );
       CREATE INDEX IF NOT EXISTS idx_doc_id ON chunks(doc_id);
     `);
 
     // Prepare reusable statements
     this._stmtInsert = this.db.prepare(
-      "INSERT INTO chunks (doc_id, title, category, chunk_index, content, tf_json) VALUES (?, ?, ?, ?, ?, ?)"
+      "INSERT INTO chunks (doc_id, title, category, chunk_index, content, embedding_json) VALUES (?, ?, ?, ?, ?, ?)"
     );
     this._stmtAll = this.db.prepare("SELECT * FROM chunks");
     this._stmtCount = this.db.prepare("SELECT COUNT(*) as cnt FROM chunks");
@@ -53,32 +64,24 @@ export class VectorStore {
     this._stmtDeleteDoc = this.db.prepare("DELETE FROM chunks WHERE doc_id = ?");
   }
 
-  /** Invalidate in-memory caches (called after any mutation). */
+  /** Invalidate the in-memory row cache (called after any mutation). */
   _invalidateCache() {
     this._rowCache = null;
-    this._invertedIndex = null;
   }
 
-  /** Build or return the in-memory row cache and inverted index. */
+  /** Build or return the in-memory row cache. */
   _ensureCache() {
     if (this._rowCache) return;
 
     const rows = this._stmtAll.all();
-    this._rowCache = rows.map((row) => {
-      const tf = new Map(JSON.parse(row.tf_json));
-      return { id: row.id, doc_id: row.doc_id, title: row.title, category: row.category, content: row.content, tf };
-    });
-
-    // Build inverted index: term → set of row indices
-    this._invertedIndex = new Map();
-    for (let i = 0; i < this._rowCache.length; i++) {
-      for (const term of this._rowCache[i].tf.keys()) {
-        if (!this._invertedIndex.has(term)) {
-          this._invertedIndex.set(term, new Set());
-        }
-        this._invertedIndex.get(term).add(i);
-      }
-    }
+    this._rowCache = rows.map((row) => ({
+      id: row.id,
+      doc_id: row.doc_id,
+      title: row.title,
+      category: row.category,
+      content: row.content,
+      embedding: JSON.parse(row.embedding_json),
+    }));
   }
 
   /** Remove all existing chunks (for fresh re-ingestion). */
@@ -87,37 +90,24 @@ export class VectorStore {
     this._invalidateCache();
   }
 
-  /** Insert a single chunk. */
-  insert(docId, title, category, chunkIndex, content) {
-    const tf = termFrequency(content);
-    const tfJson = JSON.stringify([...tf]);
-    this._stmtInsert.run(docId, title, category, chunkIndex, content, tfJson);
+  /** Insert a single chunk with its precomputed embedding vector. */
+  insert(docId, title, category, chunkIndex, content, embedding) {
+    this._stmtInsert.run(docId, title, category, chunkIndex, content, JSON.stringify(embedding));
     this._invalidateCache();
   }
 
-  /** Retrieve top-K most relevant chunks for a query. */
-  search(query, topK = 5) {
-    const queryTf = termFrequency(query);
+  /**
+   * Retrieve the top-K most relevant chunks for a precomputed query embedding.
+   * @param {number[]} queryEmbedding - embedding vector of the user's question
+   * @param {number} topK
+   */
+  search(queryEmbedding, topK = 5) {
     this._ensureCache();
 
-    // Use inverted index to find candidate chunks that share at least one term
-    const candidateIndices = new Set();
-    for (const term of queryTf.keys()) {
-      const indices = this._invertedIndex.get(term);
-      if (indices) {
-        for (const idx of indices) candidateIndices.add(idx);
-      }
-    }
-
-    // Score only candidates instead of all rows
-    const scored = [];
-    for (const idx of candidateIndices) {
-      const row = this._rowCache[idx];
-      const score = cosineSimilarity(queryTf, row.tf);
-      if (score > 0) {
-        scored.push({ ...row, score, tf_json: undefined });
-      }
-    }
+    const scored = this._rowCache.map((row) => ({
+      ...row,
+      score: cosineSimilarity(queryEmbedding, row.embedding),
+    }));
 
     scored.sort((a, b) => b.score - a.score);
     return scored.slice(0, topK);

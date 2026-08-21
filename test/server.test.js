@@ -63,13 +63,18 @@ let server;
 let tmpDir;
 let store;
 
+// A fixed stand-in embedding — these tests only exercise HTTP-level
+// behaviour (status codes, validation, docId parsing), not retrieval
+// quality, so a real embedding model is intentionally not loaded here.
+const FAKE_EMBEDDING = [1, 0, 0, 0];
+
 before(async () => {
   tmpDir = path.join(os.tmpdir(), `rag-server-test-${Date.now()}`);
   const docsDir = path.join(tmpDir, "docs");
   fs.mkdirSync(docsDir, { recursive: true });
 
   store = new VectorStore(path.join(tmpDir, "test.db"));
-  store.insert("DOC-T1", "Test Doc", "Testing", 0, "Gas leak detection portable detector soapy water test.");
+  store.insert("DOC-T1", "Test Doc", "Testing", 0, "Gas leak detection portable detector soapy water test.", FAKE_EMBEDDING);
 
   // Build a minimal Express app replicating server.js routes
   const app = express();
@@ -121,7 +126,7 @@ before(async () => {
     store.removeByDocId(docId);
     const chunks = chunkText(body, config.chunkSize, config.chunkOverlap);
     for (let i = 0; i < chunks.length; i++) {
-      store.insert(docId, title, category, i, chunks[i]);
+      store.insert(docId, title, category, i, chunks[i], FAKE_EMBEDDING);
     }
 
     res.json({

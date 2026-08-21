@@ -10,9 +10,11 @@ import path from "path";
 import { config } from "./config.js";
 import { parseFrontMatter, chunkText } from "./chunker.js";
 import { VectorStore } from "./vectorStore.js";
+import { embedText, unloadEmbeddingModel } from "./embedder.js";
 
 async function ingest() {
   console.log("=== Gas Field RAG – Document Ingestion ===\n");
+  console.log("Loading embedding model (first run downloads ~515 MB)...\n");
 
   const docsDir = config.docsDir;
   if (!fs.existsSync(docsDir)) {
@@ -47,7 +49,8 @@ async function ingest() {
     const chunks = chunkText(body, config.chunkSize, config.chunkOverlap);
 
     for (let i = 0; i < chunks.length; i++) {
-      store.insert(docId, title, category, i, chunks[i]);
+      const embedding = await embedText(chunks[i]);
+      store.insert(docId, title, category, i, chunks[i], embedding);
     }
 
     console.log(`  ✓ ${file} → ${chunks.length} chunk(s)  [${category}]`);
@@ -57,6 +60,7 @@ async function ingest() {
   console.log(`\nIngestion complete: ${totalChunks} chunks from ${files.length} documents.`);
   console.log(`Database: ${config.dbPath}`);
   store.close();
+  await unloadEmbeddingModel();
 }
 
 ingest().catch((err) => {

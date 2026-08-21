@@ -9,6 +9,7 @@ import { FoundryLocalManager } from "foundry-local-sdk";
 import { VectorStore } from "./vectorStore.js";
 import { config } from "./config.js";
 import { SYSTEM_PROMPT, SYSTEM_PROMPT_COMPACT } from "./prompts.js";
+import { getEmbeddingClient, unloadEmbeddingModel } from "./embedder.js";
 
 // Returned directly, without ever calling the model, whenever retrieve()
 // finds no chunk above the relevance threshold. The model has repeatedly
@@ -81,6 +82,10 @@ export class ChatEngine {
     this.chatClient.settings.presencePenalty = 0.6; // Discourage re-introducing topics already covered in this response
     this._emitStatus("ready", `Model ready: ${this.modelAlias}`);
 
+    // Load the embedding model used to turn queries into vectors for retrieval
+    this._emitStatus("loading", "Loading embedding model...");
+    this.embeddingClient = await getEmbeddingClient((message) => this._emitStatus("loading", message));
+
     // Open the local vector store
     this.store = new VectorStore(config.dbPath);
     const count = this.store.count();
@@ -106,14 +111,19 @@ export class ChatEngine {
 
   /**
    * Retrieve relevant context from the local knowledge base.
-   * Chunks scoring below MIN_RELEVANCE_SCORE are dropped – with stopwords
-   * filtered out of the term vectors, a real topical match scores far
-   * higher (~0.2+) than an unrelated chunk that only shares noise (~0.03).
+   * The query is embedded with the same model used at ingest time, then
+   * compared by cosine similarity against every stored chunk's embedding.
+   * Chunks scoring below MIN_RELEVANCE_SCORE are dropped. Calibrated
+   * against real embedding scores on this corpus: genuine matches score
+   * ~0.46-0.65 (even weakly-worded ones), unrelated/adversarial queries
+   * (e.g. an off-topic mushroom question) top out around ~0.38-0.41 —
+   * 0.43 sits in the gap between them with margin on both sides.
    */
-  retrieve(query) {
+  async retrieve(query) {
     const topK = this.compactMode ? Math.min(config.topK, 3) : config.topK;
-    const MIN_RELEVANCE_SCORE = 0.1;
-    return this.store.search(query, topK).filter((c) => c.score >= MIN_RELEVANCE_SCORE);
+    const MIN_RELEVANCE_SCORE = 0.43;
+    const queryEmbedding = (await this.embeddingClient.generateEmbedding(query)).data[0].embedding;
+    return this.store.search(queryEmbedding, topK).filter((c) => c.score >= MIN_RELEVANCE_SCORE);
   }
 
   /**
@@ -137,7 +147,7 @@ export class ChatEngine {
    */
   async query(userMessage, history = []) {
     // 1. Retrieve relevant chunks
-    const chunks = this.retrieve(userMessage);
+    const chunks = await this.retrieve(userMessage);
 
     if (chunks.length === 0) {
       return { text: NOT_AVAILABLE_MESSAGE, sources: [] };
@@ -178,7 +188,7 @@ export class ChatEngine {
    */
   async *queryStream(userMessage, history = []) {
     // 1. Retrieve relevant chunks
-    const chunks = this.retrieve(userMessage);
+    const chunks = await this.retrieve(userMessage);
 
     if (chunks.length === 0) {
       yield { type: "sources", data: [] };
@@ -200,24 +210,11 @@ export class ChatEngine {
       { role: "user", content: userMessage },
     ];
 
-    // 3. Stream from the local model via the SDK's callback-based streaming
+    // 3. Stream from the local model. SDK >=1.0 returns an async iterable
+    // directly (no more callback-based streaming) — a plain try/catch
+    // around the loop replaces the manual Promise/callback bookkeeping
+    // the old API required.
     this.chatClient.settings.maxTokens = this.compactMode ? 400 : 700;
-
-    // Buffer chunks from the callback and yield them as an async iterable
-    const textChunks = [];
-    let resolve;
-    let done = false;
-    let streamError = null;
-
-    const streamPromise = this.chatClient.completeStreamingChat(messages, (chunk) => {
-      textChunks.push(chunk);
-      if (resolve) { resolve(); resolve = null; }
-    }).catch((err) => {
-      streamError = err;
-    }).finally(() => {
-      done = true;
-      if (resolve) { resolve(); resolve = null; }
-    });
 
     // Yield sources metadata first
     yield {
@@ -230,49 +227,32 @@ export class ChatEngine {
       })),
     };
 
-    // Yield text chunks from the SDK streaming callback buffer.
     // This small CPU model sometimes gets stuck in a repetition loop with no
-    // native way to stop it (no cancellation API) and no decoding params
-    // (temperature/frequencyPenalty) that reliably prevent it. So we detect
-    // the loop ourselves: once the trailing ~50 characters of the generated
-    // text already appeared earlier in the same response, stop forwarding
-    // further output. The native call keeps running in the background but
-    // its result/error is discarded (already caught above).
+    // reliable decoding params (temperature/frequencyPenalty) to prevent it.
+    // So we detect it ourselves: once the trailing ~50 characters of the
+    // generated text already appeared earlier in the same response, we
+    // `break` — which also calls the async iterator's own cleanup.
     let fullText = "";
     const REPEAT_CHECK_LEN = 50;
     const MIN_LEN_BEFORE_CHECK = 120;
-    let stoppedEarly = false;
 
-    while (!done || textChunks.length > 0) {
-      if (textChunks.length === 0 && !done) {
-        await new Promise((r) => { resolve = r; });
-      }
-      while (textChunks.length > 0) {
-        const chunk = textChunks.shift();
+    try {
+      for await (const chunk of this.chatClient.completeStreamingChat(messages)) {
         const content = chunk.choices?.[0]?.delta?.content;
-        if (content) {
-          fullText += content;
-          if (fullText.length > MIN_LEN_BEFORE_CHECK) {
-            const tail = fullText.slice(-REPEAT_CHECK_LEN);
-            const searchSpace = fullText.slice(0, fullText.length - REPEAT_CHECK_LEN);
-            if (searchSpace.includes(tail)) {
-              stoppedEarly = true;
-              break;
-            }
+        if (!content) continue;
+
+        fullText += content;
+        if (fullText.length > MIN_LEN_BEFORE_CHECK) {
+          const tail = fullText.slice(-REPEAT_CHECK_LEN);
+          const searchSpace = fullText.slice(0, fullText.length - REPEAT_CHECK_LEN);
+          if (searchSpace.includes(tail)) {
+            break;
           }
-          yield { type: "text", data: content };
         }
+        yield { type: "text", data: content };
       }
-      if (stoppedEarly) break;
-    }
-
-    if (!stoppedEarly) {
-      // Ensure the stream promise resolves cleanly
-      await streamPromise;
-
-      if (streamError) {
-        yield { type: "error", data: `Model yanıt üretirken bir hata oluştu: ${streamError.message}` };
-      }
+    } catch (err) {
+      yield { type: "error", data: `Model yanıt üretirken bir hata oluştu: ${err.message}` };
     }
   }
 
@@ -280,6 +260,7 @@ export class ChatEngine {
     if (this.model) {
       this.model.unload().catch(() => {});
     }
+    unloadEmbeddingModel().catch(() => {});
     if (this.store) this.store.close();
   }
 }

@@ -1,11 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import {
-  parseFrontMatter,
-  chunkText,
-  termFrequency,
-  cosineSimilarity,
-} from "../src/chunker.js";
+import { parseFrontMatter, chunkText } from "../src/chunker.js";
 
 // ── parseFrontMatter ──
 
@@ -87,64 +82,5 @@ describe("chunkText", () => {
   it("handles empty or whitespace-only text", () => {
     const chunks = chunkText("   ", 400, 50);
     assert.equal(chunks.length, 1);
-  });
-});
-
-// ── termFrequency ──
-
-describe("termFrequency", () => {
-  it("counts term frequency correctly", () => {
-    const tf = termFrequency("gas gas leak leak leak valve");
-    assert.equal(tf.get("gas"), 2);
-    assert.equal(tf.get("leak"), 3);
-    assert.equal(tf.get("valve"), 1);
-  });
-
-  it("lowercases all terms", () => {
-    const tf = termFrequency("Gas GAS gas");
-    assert.equal(tf.get("gas"), 3);
-    assert.equal(tf.has("Gas"), false);
-  });
-
-  it("strips single-character tokens", () => {
-    const tf = termFrequency("a b gas c leak");
-    assert.equal(tf.has("a"), false);
-    assert.equal(tf.has("b"), false);
-    assert.equal(tf.get("gas"), 1);
-  });
-
-  it("returns empty map for empty input", () => {
-    const tf = termFrequency("");
-    assert.equal(tf.size, 0);
-  });
-});
-
-// ── cosineSimilarity ──
-
-describe("cosineSimilarity", () => {
-  it("returns 1 for identical vectors", () => {
-    const a = new Map([["gas", 2], ["leak", 3]]);
-    const sim = cosineSimilarity(a, a);
-    assert.ok(Math.abs(sim - 1) < 1e-9);
-  });
-
-  it("returns 0 for completely disjoint vectors", () => {
-    const a = new Map([["gas", 1]]);
-    const b = new Map([["valve", 1]]);
-    assert.equal(cosineSimilarity(a, b), 0);
-  });
-
-  it("returns value between 0 and 1 for partially overlapping vectors", () => {
-    const a = new Map([["gas", 2], ["leak", 1]]);
-    const b = new Map([["gas", 1], ["valve", 3]]);
-    const sim = cosineSimilarity(a, b);
-    assert.ok(sim > 0 && sim < 1);
-  });
-
-  it("returns 0 when either vector is empty", () => {
-    const a = new Map();
-    const b = new Map([["gas", 1]]);
-    assert.equal(cosineSimilarity(a, b), 0);
-    assert.equal(cosineSimilarity(b, a), 0);
   });
 });

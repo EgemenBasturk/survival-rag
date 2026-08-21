@@ -9,6 +9,7 @@ import fs from "fs";
 import { config } from "./config.js";
 import { ChatEngine } from "./chatEngine.js";
 import { parseFrontMatter, chunkText } from "./chunker.js";
+import { embedText } from "./embedder.js";
 
 const app = express();
 
@@ -126,7 +127,8 @@ app.post("/api/upload", express.raw({ type: "*/*", limit: "2mb" }), async (req, 
 
     const chunks = chunkText(body, config.chunkSize, config.chunkOverlap);
     for (let i = 0; i < chunks.length; i++) {
-      store.insert(docId, title, category, i, chunks[i]);
+      const embedding = await embedText(chunks[i]);
+      store.insert(docId, title, category, i, chunks[i], embedding);
     }
 
     console.log(`[Upload] ${safeName} → ${chunks.length} chunk(s) ingested`);
